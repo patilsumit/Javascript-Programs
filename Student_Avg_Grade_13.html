@@ -1,0 +1,42 @@
+<!-- ----------------------------------------------------------------------
+Assignment No :13
+Program       :Write a program to input three subjects marks and calculate average marks and display grade
+               according to average marks. 
+Date          :22-06-2018
+Auther        :Sumit Patil
+Institute     :WSA
+-------------------------------------------------------------------------- -->
+<html>
+<script>
+
+    //Subject Details
+    var mySub1=Number(prompt("Enter Subject1:"));
+    var mySub2=Number(prompt("Enter Subject2:"));
+    var mySub3=Number(prompt("Enter Subject3:"));
+
+    //Subjects Avg
+    var avg=(mySub1 + mySub2  + mySub3 )/3;
+
+     document.write("Average:"+avg + "<br>");
+    if(avg>=90)
+    {
+        document.write("Grade Is Excillant");    
+    }
+    else if(avg<=90 && avg>=80)
+    {
+        document.write("Grade Is A+");
+    }
+    else if(avg<=80 && avg>=70)
+    {
+        document.write("Grade Is A");
+    }
+    else if(avg<=70 && avg>=60)
+    {
+        document.write("Grade Is B+");
+    }
+    else
+    {
+        document.write("Grade is Fail");
+    }
+</script>
+</html>

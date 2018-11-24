@@ -1,0 +1,67 @@
+<!-- ----------------------------------------------------------------------
+Assignment No :42
+Program       :Write a program to create three paragraphs with different class and manipulate style rules using CSS class selectors.
+Date          :04-08-2018
+Auther        :Sumit Patil
+Institute     :WSA
+------------------------------------------------------------------------ -->
+<html>
+    <head>
+        <title>CSS Class Selectors</title>
+        <style type="text/CSS">
+        </style>
+    </head>
+    <body>
+        <p class="para1">A postcat. Sign up for our Smashing Newsletter.
+                Smashing Newsletter
+                Upgrade your inbox and get our editors’ picks twice a month.
+                
+                Your email
+                
+                Subscribe→
+                In this article, I’d like to reacquaint you with the humble workhorse of communication that is the paragraph. Paragraphs are everywhere. In fact, at the high risk of stating the obvious, you are reading one now. Despite their ubiquity, we frequently neglect their presentation. This is a mistake. Here, we’ll refer to some time-honored typesetting conventions, with an emphasis on readability, and offer guidance on adapting them effectively for devices and screens. We’ll see that the ability to embed fonts with @font-face is not by itself a solution to all of our typographic challenges. The Perfect Paragraph In 1992, Tim Berners-Lee circulated a document titled “HTML Tags,” which outlined just 20 tags, many of which are now obsolete or have taken other forms. The first surviving tag to be defined in the document, after the crucial anchor tag, is the paragraph tag. It wasn’t until 1993 that a discussion emerged on the proposed image tag.
+                
+                In this article, I’d like to reacquaint you with the humble workhorse of communication that is the paragraph. Paragraphs are everywhere. In fact, at the high risk of stating the obvious, you are reading one now. Despite their ubiquity, we frequently neglect their presentation. This is a mistake. <p>
+        <p class="para1">A postcat. Sign up for our Smashing Newsletter.
+                Smashing Newsletter
+                Upgrade your inbox and get our editors’ picks twice a month.
+                
+                Your email
+                
+                Subscribe→
+                In this article, I’d like to reacquaint you with the humble workhorse of communication that is the paragraph. Paragraphs are everywhere. In fact, at the high risk of stating the obvious, you are reading one now. Despite their ubiquity, we frequently neglect their presentation. This is a mistake. Here, we’ll refer to some time-honored typesetting conventions, with an emphasis on readability, and offer guidance on adapting them effectively for devices and screens. We’ll see that the ability to embed fonts with @font-face is not by itself a solution to all of our typographic challenges. The Perfect Paragraph In 1992, Tim Berners-Lee circulated a document titled “HTML Tags,” which outlined just 20 tags, many of which are now obsolete or have taken other forms. The first surviving tag to be defined in the document, after the crucial anchor tag, is the paragraph tag. It wasn’t until 1993 that a discussion emerged on the proposed image tag.
+                
+                In this article, I’d like to reacquaint you with the humble workhorse of communication that is the paragraph. Paragraphs are everywhere. In fact, at the high risk of stating the obvious, you are reading one now. Despite their ubiquity, we frequently neglect their presentation. This is a mistake. <p>
+        <p class="para1">A postcat. Sign up for our Smashing Newsletter.
+                Smashing Newsletter
+                Upgrade your inbox and get our editors’ picks twice a month.
+                
+                Your email
+                
+                Subscribe→
+                In this article, I’d like to reacquaint you with the humble workhorse of communication that is the paragraph. Paragraphs are everywhere. In fact, at the high risk of stating the obvious, you are reading one now. Despite their ubiquity, we frequently neglect their presentation. This is a mistake. Here, we’ll refer to some time-honored typesetting conventions, with an emphasis on readability, and offer guidance on adapting them effectively for devices and screens. We’ll see that the ability to embed fonts with @font-face is not by itself a solution to all of our typographic challenges. The Perfect Paragraph In 1992, Tim Berners-Lee circulated a document titled “HTML Tags,” which outlined just 20 tags, many of which are now obsolete or have taken other forms. The first surviving tag to be defined in the document, after the crucial anchor tag, is the paragraph tag. It wasn’t until 1993 that a discussion emerged on the proposed image tag.
+                
+                In this article, I’d like to reacquaint you with the humble workhorse of communication that is the paragraph. Paragraphs are everywhere. In fact, at the high risk of stating the obvious, you are reading one now. Despite their ubiquity, we frequently neglect their presentation. This is a mistake. </p>
+      <center> <label id="btnsub">Submit</label>
+            </body>
+    
+<script>
+  btnsub.addEventListener("mouseover",myFunction1);
+  btnsub.addEventListener("mouseout",myFunction2);
+  function myFunction1()
+  {
+   var x=document.querySelectorAll(".para1");
+   x[0].style.backgroundColor="red";
+   x[1].style.backgroundColor="violet";
+   x[2].style.backgroundColor="lightblue";
+  }
+
+  function myFunction2()
+  {
+   var x=document.querySelectorAll(".para1");
+   x[0].style.backgroundColor="silver";
+   x[1].style.backgroundColor="green";
+   x[2].style.backgroundColor="#ff0100";
+  }
+</script>
+</html>

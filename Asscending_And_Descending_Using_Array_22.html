@@ -1,0 +1,40 @@
+<!-- ----------------------------------------------------------------------
+Assignment No :22
+Program       :Write a program to arrange the element of an array in ascending and descending order.
+Date          :19-07-2018
+Auther        :Sumit Patil
+Institute     :WSA
+------------------------------------------------------------------------ -->
+<html>
+    <body>
+    <script>
+
+        var myArray=[4,82,2,1,67];
+
+       /* myArray.sort(function(a,b) //Ascending
+        {
+           return (a-b);
+        });
+        
+        myArray.sort(function(a,b) //descending 
+        {
+            return(b-a);
+        });
+        document.write(myArray);*/
+         
+        for(i=0;i<myArray.length;i++)
+        {
+            for(j=0;j<i;j++)
+            {
+                if(myArray[i]>myArray[j])
+                {
+                    var temp=myArray[i];
+                    myArray[i]=myArray[j];
+                    myArray[j]=temp;
+                }
+            }
+        }
+        document.write(myArray);
+    </script>
+    </body>
+    </html> 

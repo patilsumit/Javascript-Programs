@@ -1,0 +1,31 @@
+<!-- ----------------------------------------------------------------------
+Assignment No :30(c)
+Program       :Write a JavaScript program To find the length of employee object.
+Date          :20-07-2018
+Auther        :Sumit Patil
+Institute     :WSA
+-------------------------------------------------------------------------- -->
+<html>
+    <head>
+        <title>Object Length Access</title>
+    </head>
+    <body>
+        
+    </body>
+<script>
+var Employee={
+             EmpName:"Sumit Patil",
+             EmpId:704,
+             EmpSallary:35000,
+             EmpDept:"Wsa"
+        }; 
+
+      var len=0;
+       for(var l in Employee)
+       {
+           len++;
+       } 
+       document.write("Employee Length:"+len+"<br>");//Frist Way
+      document.write("Employee Length:"+Object.keys(Employee).length); //2nd Way         
+</script>
+</html>

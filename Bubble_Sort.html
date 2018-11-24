@@ -1,0 +1,31 @@
+<!-- ----------------------------------------------------------------------
+Program       :Bubble Sort Program
+Date          :04-07-2018
+Auther        :Sumit Patil
+Institute     :WSA
+------------------------------------------------------------------------ -->
+<html>
+<script>
+
+function bubbleSort(myNum) {
+  var length = myNum.length;
+  for (var i = 0; i < length; i++) 
+  { //Number of passes
+  
+    for (var j = 0; j < (length - i - 1); j++)
+     { 
+       //Notice that j < (length - i)
+      if(myNum[j] > myNum[j+1])  //Compare Position
+       {
+         //Swap the numbers
+        var tmp = myNum[j];  
+        myNum[j] = myNum[j+1]; //Replace current number with adjacent number
+        myNum[j+1] = tmp; //Replace adjacent number with current number
+      }
+      return myNum;
+    }        
+  }
+}
+document.write(bubbleSort([5,7,8,4,9,22,66,77]));
+</script>
+</html>

@@ -1,0 +1,28 @@
+<!-- ----------------------------------------------------------------------
+Program       :String Replace Method Classroom Practice
+Date          :11-07-2018
+Auther        :Sumit Patil
+Institute     :WSA
+------------------------------------------------------------------------ -->
+<html>
+
+<body>
+    <script>
+        var str="Hello World Welcome to JS";
+
+        var repStr=str.replace("JS","WSA");
+
+        document.write("Replaced String normal Way:"+repStr+"<br>");
+
+        var str1="A blue bottle with a blue liquid is on a Blue table"; //replace Sring Case Sensitive
+        var replStr=str1.replace(/blue/g,"green"+"<br>");
+
+        document.write("Replaced String Using  Regular Expression:"+replStr+"<br>");
+
+        var str1=str1="A blue bottle with a blue liquid is on a Blue table"; //replace Sring Case InSensitive;
+        var replStr=str1.replace(/blue/gi,"green"+"<br>");
+
+        document.write("Repladed String using Regular Expression:"+replStr);
+    </script>
+</body>
+</html>

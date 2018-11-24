@@ -1,0 +1,40 @@
+<!-- ----------------------------------------------------------------------
+Assignment No :34
+Program       :Write a JavaScript program to search a date within a string.
+Date          :25-07-2018
+Auther        :Sumit Patil
+Institute     :WSA
+-------------------------------------------------------------------------- -->
+<html>
+    <head>
+        <title>Search Date within a string</title>
+   
+        <body>
+          
+        </body>
+    <script>
+        var myDate="02/05/2018 as 02/11/2014";
+        var regexp=/[0-9]{2}\/[0-9]{2}\/[0-9]{4}$/;
+        var myArray=myDate.split(' ');
+        
+
+        for(i=0;i<myArray.length;i++)
+        {
+            if(myArray[i]==myArray[i].match(regexp))
+            {
+                if(myArray[i].substring(0,2)<=31)
+                {
+                    if(myArray[i].substring(3,5)<=12)
+                    {
+                        document.write(myArray[i]);
+                    }
+                }
+            }
+        }
+
+      
+    </script>
+    </head>
+   
+
+</html>

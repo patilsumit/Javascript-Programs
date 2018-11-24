@@ -1,0 +1,28 @@
+<!-- ----------------------------------------------------------------------
+Assignment No :28
+Program       :Write a JavaScript recursive function to reverse a string.
+Date          :19-07-2018
+Auther        :Sumit Patil
+Institute     :WSA
+------------------------------------------------------------------------ -->
+<html>
+    <body>
+    <script>
+        debugger;
+        var str="";   
+        var reverseStr=function(str)
+        {
+            if(str=="")
+            {
+               return "";
+            }
+            else
+            {  
+                return reverseStr(str.substr(1)) + str.charAt(0);
+            }
+        }
+        document.write(reverseStr(prompt("Enter String:")));
+        
+    </script>
+    </body>
+    </html> 

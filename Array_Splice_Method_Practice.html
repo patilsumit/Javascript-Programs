@@ -1,0 +1,46 @@
+<!-- ----------------------------------------------------------------------
+Program       :Array Splice Method Practice 
+Date          :12-07-2018
+Auther        :Sumit Patil
+Institute     :WSA
+-------------------------------------------------------------------------- -->
+<html>
+<script>
+    var arr=['hello','hi','123',45,'welcome'];
+
+    document.write("1 Before splice arrray is:"+arr+"<br>");
+    arr.splice(1,3);
+    document.write("2 After splice array is:"+arr+"<br>");
+
+    arr.splice(3);//only 1 index is passed
+    document.write("3 After splice array is:"+arr+"<br>");
+
+    var arr=['hello','hi','123',45,'welcome'];
+    arr.splice(-3);
+    document.write("4 Before splice array is:"+arr+"<br>");
+
+    var arr=['hello','hi','123',45,'welcome'];
+    arr.splice(-3,3);//ex 2d parameter is display 3 remove element 
+    document.write("5 After splice array is:"+arr+"<br>");
+
+    var arr=['hello','hi','123',45,'welcome'];
+    arr.splice(3,-1);
+    document.write("6 after splice array is:"+arr+"<br>");
+
+    var arr=['hello','hi','123',45,'welcome'];
+    arr.splice(-3,-5);
+    document.write("7 After splice array is:"+arr+"<br>");
+
+    var arr=['hello','hi','123',45,'welcome'];
+    arr.splice(2,0,4,5,6,7);//adding 4 5 6 7 , remove 0 elemnt
+    document.write("After splice array is:"+arr+"<br>");
+
+   
+
+
+    
+          
+
+     
+</script>
+</html>

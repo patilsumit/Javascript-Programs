@@ -1,0 +1,217 @@
+<!-- ----------------------------------------------------------------------
+Assignment No :37
+Program       :Write a JavaScript program to create email registration form and validate the following data , all the
+               fields must have entered data.
+Date          :27-07-2018
+Auther        :Sumit Patil
+Institute     :WSA
+-------------------------------------------------------------------------- -->
+<html>
+    <head>
+        <title>Registration Form</title>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.min.js">
+        </script>        
+        <style type="text/css">
+        td{
+            text-align: center;
+        }
+        </style>
+
+    </head> 
+        <body>
+            <center>
+          <h1>Registration Form</h1>
+          <form  id="registration" name="registration" method="" onsubmit="return validate()">      
+          <table border="1" cellspacing="5" cellpadding="3">
+              <tr>
+                  <td>First Name:</td>
+                  <td><input type="text" id="txtfname" placeholder="First Name" maxlength="10"></td>
+                  
+                </tr>
+              <tr>
+                    <td>Last Name:</td>
+                    <td><input type="text" id="txtlname" placeholder="Last Name" maxlength="10"></td>
+              </tr>
+              <tr>
+                    <td>User Name:</td>
+                    <td style="text-align:right"><input type="text" id="txtuname" name="txtuname" placeholder="User Name" minlength="8"></td>
+              </tr>
+              <tr>
+                    <td>Email:</td>
+                    <td><input type="email" id="txtemail" placeholder="Email"></td>
+              </tr>
+              <tr>
+                    <td>Password:</td>
+                    <td><input type="password" id="txtpwd" name="txtpwd" placeholder="Pass Word" minlength="6" maxlength="20" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" 
+                        title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" ></td>
+              </tr>
+              <tr>
+                    <td>Conform Password:</td>
+                    <td><input type="password" id="txtcpwd" name="txtcpwd" placeholder="Conform Pass Word"></td>
+               
+                </tr>
+              <tr>
+                    <td>BirthDate:</td>
+                    <td><input type="date" id="txtdate"  placeholder="Birth Date"></td>
+              </tr>
+              <tr>
+                    <td>Country:</td>
+                    <td>
+                        <select id="country">
+                            <option>India</option>
+                            <option>Pakistan</option>
+                            <option>China</option>
+                            <option>HongKong</option>
+                            <option>Thailand</option>
+                            <option>Ugenda</option>
+                            <option>Kenya</option>
+                            <option>Japan</option>
+                        </select>
+                    </td>
+              </tr>
+              <tr>
+                    <td>Gender:</td>
+                    <td>
+                   Male <input type="radio" id="rdmale" name="rd">
+                   Female<input type="radio" id="rdfemale" name=rd>
+                    </td>
+              </tr>
+              <tr>
+                  <td>Mobile Number:</td>
+                  <td>
+                      <input type="number" id="txtmobile" maxlength="10" placeholder="Mobile" 
+                       >
+                  </td>
+                </tr>
+                <tr>
+                    <td>Alternative Email:</td>
+                    <td><input type="email" id="txtaemail" placeholder="Alternative Email"></td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                    <input type="checkbox" id="chktc" name="chktc" value="Agree" title="please Accept Terms and Condition" required>Accept All the Terms and Condition
+                    </td>
+                </tr>
+                <tr style="text-align:center ">
+                    <td colspan="2"><input type="submit" id="btnsubmit"  value="submit">
+                        <input type="reset" id="btnreset" value="reset">
+                    </td>
+                </tr>
+          </table>   
+          </form>
+        </body>
+        
+    <script>
+         /*function validate()
+      {
+      
+         if( document.registration.txtfname.value == "" )
+         {
+            alert( "Please provide your name!" );
+            document.registration.txtfname.focus() ;
+            return false;
+         }
+         if( document.registration.txtlname.value == "" )
+         {
+            alert( "Please provide your Last name!" );
+            document.registration.txtlname.focus() ;
+            return false;
+         }
+      }*/
+     /*
+       function Validate()
+       {
+        var uname=document.registration.txtuname.value;
+        var password=document.registration.txtpwd.value;
+        var cpassword=document.registration.txtcpwd.value;
+        
+          if (uname==null || uname=="")
+          {  
+             alert("Name can't be blank");  
+             return false;  
+          } 
+          else if(!regExp.test(password))
+          {
+              document.getElementById("msg").style.color="red";
+              if(password !=cpassword)
+              {
+
+              }
+                alert("Do Not Match Password!");
+                return false;
+          }  
+          return true;
+          
+       }
+     
+       */
+      
+       $('input[type=submit]').click(function(e)
+       {
+        var chk=document.registration.chktc.value;
+        var rdmf=document.getElementsByName("rd");
+        
+        
+          if($("#txtfname").val() == "")
+          {
+              alert("please enter First Name");
+              
+              return false;
+          }
+          else if($("#txtlname").val() == "")
+          {
+              alert("please enter Last Name");
+              return false;
+          }
+          else if($("#txtuname").val() == "")
+          {
+              alert("please enter User Name");
+              return false;
+          }
+          else if($("#txtemail").val() == "")
+          {
+              alert("please enter Email ID");
+              return false;
+          }
+          else if($("#txtpwd").val() == "")
+          {
+              alert("please enter Password");
+              return false;
+          }
+          
+          else if($("#txtpwd").val() !=$("#txtcpwd").val())
+             {
+                 
+              alert("Password Not Matched");
+              
+              return false;
+            }
+           
+            else if($("#txtmobile").val() == "")
+             {
+                 
+              alert("Please Enter Mobile Number");
+              
+              return false;
+            }
+            else if($("#txtaemail").val() == "")
+            {
+              alert("please enter Alternative Email ID");
+              return false;
+            }
+            else 
+            {
+
+                //alert("checkbox Accept");
+              //  return true;
+               
+                
+            }
+       });
+
+ 
+        
+    </script>
+ 
+  
+</html>

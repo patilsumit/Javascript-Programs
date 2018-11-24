@@ -1,0 +1,51 @@
+<!-- ----------------------------------------------------------------------
+Program       :Write a program to generate strong number of Any Digit.
+Date          :09-07-2018
+Auther        :Sumit Patil
+Institute     :WSA
+------------------------------------------------------------------------ -->
+<html>
+<script>
+  
+   debugger;
+   
+for(i=100;i<=10000;i++)
+{
+  cpNum=i;
+
+  sum=0;
+   //copy Number
+  for(j=0;cpNum!=0;j++)
+  {
+      //Armstrong Logic
+     reminder=cpNum % 10;
+     strongFunction=strong(reminder);
+     sum=strongFunction + sum;
+     cpNum=parseInt(cpNum / 10) ;
+  }
+
+  if(sum==i)
+  {
+      document.write(sum+" ");
+  }
+}
+  function strong(n)
+   { 
+    
+            if(n<=0)
+            {
+               return 1;
+            }
+            else
+            {
+                return (n * strong(n-1));
+            }
+   }
+ 
+
+
+</script>
+<Body>
+    
+    </Body>
+</html>

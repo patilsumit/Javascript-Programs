@@ -1,0 +1,31 @@
+<!-- ----------------------------------------------------------------------
+Program       :Event Bubbling Handling
+Date          :24-07-2018
+Auther        :Sumit Patil
+Institute     :WSA
+-------------------------------------------------------------------------- -->
+<html>
+    <head>
+        <title>Event Bubbling</title>
+   
+        <body>
+            <div onclick="alert('Div Clicked')">Div Element
+            <br><br><span onclick="alert('Span Clicked')">Span Element
+                <br><br> <input type="button" value="click Me" onclick="alert('Button Clicked')">  
+            </div>
+ 
+
+            <div onclick="alert('Div Clicked')">Div Element
+                    <br><br><span>Span Element
+                        <br><br> <input type="button" value="click Me">
+                        </span>  
+            </div>
+          
+         </body>
+    <script>
+       
+    </script>
+    </head>
+   
+
+</html>

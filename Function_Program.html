@@ -1,0 +1,63 @@
+<!-- ----------------------------------------------------------------------
+Assignment No :Classroom
+Program       :Function Program
+Date          :28-06-2018
+Auther        :Sumit Patil
+Institute     :WSA
+------------------------------------------------------------------------ -->
+<html>
+<script>
+
+ function testFunctionOne (x,y)
+ {
+   document.write("x:"+x+"<br>"+"y:"+y+"<br>");
+
+    var c;
+
+    c= x + y;
+
+    return c;
+
+ }
+
+  // Functions - Method1
+  var myArg1 = 100;
+  var myArg2 = 200;
+  var myResult;
+
+  myResult = testFunctionOne(myArg1,myArg2);
+  document.write("Function 1:"+myResult+"<br>");
+  // Function - Method2
+
+  function  testFunctionTwo() 
+  {
+       x=myArg1;
+       y=myArg2;
+
+       document.write("Function 2:"+ (x + y));
+  }
+  testFunctionTwo(myArg1,myArg2);
+
+
+  //Function -Method3
+
+   function testFunctionThree()
+   {
+       var myResult=myArg1 + myArg2;
+
+       return myResult;
+   } 
+   myResult= testFunctionThree(10,20);
+   document.write("Function 3:"+myResult);
+     
+     //Function - Method 4
+     function testFunctionFour(myArg1,myArg2)
+     {
+        myResult =myArg1 + myArg2;
+
+     }
+      testFunctionFour();
+
+
+</script>
+</html>

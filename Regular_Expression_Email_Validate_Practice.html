@@ -1,0 +1,29 @@
+<!-- ----------------------------------------------------------------------
+Program       :Regular Program Email Validate
+Date          :18-07-2018
+Auther        :Sumit Patil
+Institute     :WSA
+------------------------------------------------------------------------ -->
+<html>
+    <body>
+    <script>
+        //Given Input is Email validate 
+        
+        function emailValidate_case(str)
+        {
+            var regexp=/^[a-z]+([0-9]+)?\@[a-z]+\.[a-z]{2,4}$/;
+            if(regexp.test(str))
+            {
+               console.log("Email is Validate");
+            }
+            else
+            {
+                console.log("Email is not Validate");
+            }
+        }
+    
+         emailValidate_case('sumit1234@gmail.com');
+         
+    </script>
+    </body>
+    </html> 

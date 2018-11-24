@@ -1,0 +1,45 @@
+<!-- ----------------------------------------------------------------------
+Program       :Bom Location Method
+Date          :03-08-2018
+Auther        :Sumit Patil
+Institute     :WSA
+-------------------------------------------------------------------------- -->
+<html>
+    <head>
+        <title>Bom Location Methods</title>
+        
+    </head> 
+        <body>
+            <center>
+          <h1>Bom Location Methods</h1>
+          
+         <button onclick="myLocAssign()">Assign a new URL</button>
+         <button onclick="myLocReload()">Reload The URL</button>
+         <button onclick="myLocReplace()">Replace The URL</button>
+        </body>
+        
+    <script>
+        //Function for replacing
+      function myLocReplace()
+      {
+          var myURL=prompt("Enter the url you want to replace ,please note you");
+          location.replace(myURL);
+      }
+
+      //Function For Assignment
+      function myLocAssign()
+      {
+          var myURL=prompt("Enter the URL you want to Assign:");
+          location.assign(myURL);
+      }
+
+      //Function For Reloading
+      function myLocReload()
+      {
+          
+          location.reload();
+      }
+    </script>
+ 
+  
+</html>

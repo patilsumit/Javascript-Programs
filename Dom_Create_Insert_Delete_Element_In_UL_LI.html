@@ -1,0 +1,68 @@
+<!-- ----------------------------------------------------------------------
+Program       :Dom Create Insert Delete Element In UI LI
+Date          :31-07-2018
+Auther        :Sumit Patil
+Institute     :WSA
+-------------------------------------------------------------------------- -->
+<html>
+    <head>
+        <title>Dom Create Delete Insert Element</title>
+        
+    </head> 
+        <body>
+            <center>
+          <h1>Dom Create Insert Delete</h1>
+          <p> try out adding and removing elements using dom......</p> 
+             
+          <button onclick="myCreateUL()">Create UL LI</button>
+          <button onclick="myDeletList()">Delete Specfied List</button>
+          <button onclick="myInsertElement()">Insert a Element</button>
+        
+          <div id="divtag">
+                
+            </div>
+        </body>
+        
+    <script>
+        //Create UL List
+         var namedUL=document.createElement("UL");
+         function myDeletList()
+        {
+            var del=Number(prompt("Enter Delete  Element:"));    
+           var delItem=namedUL.childNodes[del];
+
+           namedUL.removeChild(delItem);     
+        }
+        
+         function myInsertElement()
+         {
+             var newItem=document.createElement("LI");
+             var textNode=document.createTextNode(prompt("Enter Text:"));
+             newItem.appendChild(textNode);
+             var insertElem=Number(prompt("Enter which position:"));
+             namedUL.insertBefore(newItem,namedUL.childNodes[insertElem]);
+         } 
+
+        function myCreateUL()
+        {
+            for(i=0;i<4;i++)
+            {
+            //Create LI List
+            var namedLI=document.createElement("LI");
+            
+                //Enter User Input
+                var getText=document.createTextNode(prompt("Enter City:"));
+                var parent=document.getElementById("divtag");  //Define Divsion Tag
+                 //Define Divsion Tag
+                namedLI.appendChild(getText);
+                namedUL.appendChild(namedLI);
+                parent.appendChild(namedUL);
+                //document.body.appendChild(namedUL);
+                 
+            }
+    
+        }
+    </script>
+ 
+  
+</html>

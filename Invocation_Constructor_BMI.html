@@ -1,0 +1,59 @@
+<!-- ----------------------------------------------------------------------
+Assignment No :Classroom
+Program       :Function Constructor Invocation Program
+Date          :04-07-2018
+Auther        :Sumit Patil
+Institute     :WSA
+------------------------------------------------------------------------ -->
+<html>
+<script>
+    //---------------Constructor invocation - 1-----  return attribute
+   var getBMI=function(Height,Weight)
+   {
+       //create BMI Logic
+
+       return this.myResult= Weight / (Height * Height) ;
+   };
+   var getQualification=function(Qualification)
+   {
+       if(Qualification=="B-Tech")
+       {
+            return this.Qualify="Bachaler Student";
+       }
+       else
+       {
+           return this.Qualify="Master Student";
+       }
+   };
+
+  var obj=new getBMI(2,50);
+  var obj1=new getQualification("B-Tech");
+        
+  document.write("Constructor_Invocation 1 BMI Is:" + obj.myResult +"<br>");
+  document.write("Constructor_Invocation 1 Qualification Is:" + obj1.Qualify +"<br>");
+
+ //---------------Constructor Invocation -2  --------------return object
+ var getBMI=function(Height,Weight)
+   {
+
+       return {myResult: Weight / (Height * Height)} ;
+   };
+   var getQualification=function(Qualification)
+   {
+       if(Qualification=="B-Tech")
+       {
+            return {Qualify:"Bachaler Student"};
+       }
+       else
+       {
+           return {Qualify:"Master Student"};
+       }
+   };
+
+  var obj=new getBMI(2,50);
+  var obj1=new getQualification("M-Tech");
+        
+  document.write("Constructor_Invocation 2 BMI Is:" + obj.myResult +"<br>");
+  document.write("Constructor_Invocation 2 Qualification Is:" + obj1.Qualify +"<br>");
+</script>
+</html>

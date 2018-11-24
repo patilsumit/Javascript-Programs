@@ -1,0 +1,30 @@
+<!-- ----------------------------------------------------------------------
+Assignment No :31
+Program       :Write a JavaScript program to find area and perimeter of rectangle.
+Date          :23-07-2018
+Auther        :Sumit Patil
+Institute     :WSA
+-------------------------------------------------------------------------- -->
+<html>
+    <head>
+        <title>Area and Perimeter of Rectangle</title>
+    </head>
+    <body>
+        
+    </body>
+<script>
+var Rectangle={Height:250,Width:350,Area:function()
+{
+    return this.Height * this.Width;
+},Perimeter:function()
+{
+    return (2 * (this.Height + this.Width));
+}};
+
+        document.write("Heigth: "+Rectangle.Height+"<br>");
+        document.write("Width: "+Rectangle.Width+"<br>"); 
+        document.write("Area Of Rectangle:"+Rectangle.Area()+"<br>");
+        debugger;
+        document.write("Perimeter Of Rectangle:"+Rectangle.Perimeter());
+</script>
+</html>

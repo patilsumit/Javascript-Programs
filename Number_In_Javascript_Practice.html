@@ -1,0 +1,61 @@
+<!-- ----------------------------------------------------------------------
+Assignment No :Classroom
+Program       :Number In JavaScript Practice
+Date          :10-07-2018
+Auther        :Sumit Patil
+Institute     :WSA
+------------------------------------------------------------------------ -->
+<html>
+
+<body>
+    <h2>Extra large Number Is automatically Display in JavaScript</h2>
+    <p id="demo"></p>
+   <p id="demo1"></p>
+   <p id="demo2"></p>
+    <script>
+
+       var x = 123e5;
+      var y = 123e-5;
+
+   document.getElementById("demo").innerHTML = x + "<br>" + y;
+//----------------------------------
+     var a = 999999999999999;
+     var b = 9999999999999999; //Not Define Priodic Notation Display The Accurate 15 Digit.
+  document.getElementById("demo1").innerHTML = a + "<br>" + b + "<br>";
+//-----------------------------------------
+  document.write( "Not Divide Because apple is Not a Numeric :"+100 / "Apple" + "<br>"); //NaN Error
+
+//----------------------------
+  var p = "NaN";
+ document.write("Type Of Operator Is Define Object:"+typeof p +"<br>");
+//-------------------------------
+var myNumber = 2; //Infinity is Not Possibal Largest Number that time display infinity
+var txt = "";
+while (myNumber != Infinity) {
+   myNumber = myNumber * myNumber;
+   txt = txt + myNumber + "<br>";
+}
+document.getElementById("demo2").innerHTML = txt;
+
+//------------------
+
+var q = 0xFF;//Numeric constant preceded by the hexadecimal
+document.write( " Directly Automatically codedd In Hexa : 0xFF = " + q +"<br><br>");
+
+//----------------
+ //By default, JavaScript displays numbers as base 10 decimals.
+ //toString() method Convert into number to string
+ //But you can use the toString() method to output numbers from base 2 to base 36.
+  var myNum=32;
+   document.write("Decimal:"+myNum.toString(10)+"<br>" + "Octal:"+myNum.toString(8)+ "<br>"+"Hexadecimal:"+myNum.toString(16)+"<br>"+"Binary:"+myNum.toString(2)+"<br><br>");
+      
+//-----
+var s=123;
+var n=new Number(123);
+
+document.write("Never create numbers as objects" +"<br>"+
+  "Numbers and objects cannot be safely compared"+"<br>");
+document.write("Answer:"+(s==n)); 
+    </script>   
+</body>
+</html>

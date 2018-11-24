@@ -1,0 +1,32 @@
+<!-- ----------------------------------------------------------------------
+Assignment No :21
+Program       :Write a program to compute sum and product of array of integer.
+Date          :28-06-2018
+Auther        :Sumit Patil
+Institute     :WSA
+------------------------------------------------------------------------ -->
+<html>
+<script>
+
+  myNum =[]; //Array Declaration
+  sum=0;
+  product =1;
+
+   for(i=1;i<=5;i++)
+   {
+      myNum[i]= Number(prompt("Enter Number:"));
+   }
+   document.write(myNum + "<br>");
+   for(i=1;i<=5;i++)
+   {
+       //sum Of Array
+     sum= sum + myNum[i];
+
+    product = product * myNum[i];
+   }
+   document.write("Sum:"+sum+"<br>");
+   document.write("Product:"+product);
+   
+
+</script>
+</html>

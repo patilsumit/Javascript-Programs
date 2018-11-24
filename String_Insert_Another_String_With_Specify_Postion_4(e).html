@@ -1,0 +1,21 @@
+<!-- ----------------------------------------------------------------------
+Assignment No :04(e)
+Program       :Write a JavaScript program To insert a string within a specific position in another string.
+Date          :16-07-2018
+Auther        :Sumit Patil
+Institute     :WSA
+-------------------------------------------------------------------------- -->
+<html>
+<script>
+
+    var myStr1="Hi how are you";
+    var myStr2="Good morning";
+
+    var myPos=3;
+ 
+    var myResult=[myStr1.slice(0,myPos),myStr2,myStr1.slice(myPos)].join();
+
+
+    document.write("Output:"+myResult);
+</script>
+</html>

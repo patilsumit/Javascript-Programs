@@ -1,0 +1,27 @@
+<!-- ----------------------------------------------------------------------
+Program       :String SubStr And SubString Practish
+Date          :27-06-2018
+Auther        :Sumit Patil
+Institute     :WSA
+------------------------------------------------------------------------ -->
+<html>
+<script>
+  //alert("This IS a string Example");
+ var myString="Hello World Sumit !";
+
+  document.write("Substr:"+myString.substr(1,6)+"<br>");  //start with sorce to destination
+  document.write("Substr passed when one Index:"+myString.substr(3)+"<br>");
+  document.write("Substr passed when -negative Index:"+myString.substr(-3)+"<br>");//Ex- String length -(-3)
+  document.write("Substr Frist index is larger than second:"+myString.substr(10,0)+"<br>");
+  document.write("Substr  Positive And Negative Index:"+myString.substr(5,-5)+"<br>");//2nd string mines compute zero 
+  document.write("Substr  Negative And Positive Index:"+myString.substr(-5,5)+"<br>");
+  document.write("Substr  Both Positive Index:"+myString.substr(5,5)+"<br>");
+  
+  document.write("---------------------"+"<br>");
+  document.write("Substring:"+myString.substring(3,7)+"<br>");//start with source ex: lo W
+  document.write("Substring Pass Negative And Positive Index:"+myString.substring(-3,5)+"<br>");
+  document.write("Substring Pass Positive And Negative Index:"+myString.substring(5,-3)+"<br>");
+  document.write("Substring Pass When Negative Index:"+myString.substring(-5)+"<br>");
+  document.write("Substring Pass Both Negative Index:"+myString.substring(-5,-5)+"<br>");
+   </script>
+</html>

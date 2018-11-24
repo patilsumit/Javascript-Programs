@@ -1,0 +1,58 @@
+<!-- ----------------------------------------------------------------------
+Assignment No :44
+Program       :Write a JavaScript program to determine a perimter of island.
+Date          :07-08-2018
+Auther        :Sumit Patil
+Institute     :WSA
+------------------------------------------------------------------------ -->
+<html>
+    <head>
+        <title>Perimeter Of Island</title>
+    </head>
+    <body><center>
+      <h1>Perimeter Of Island</h1>
+    </body>
+    
+   <script>
+
+var GFG = (function () {
+    function GFG() {
+    }
+    GFG.numofneighbour = function (matrix, i, j) {
+        var count = 0;
+        if (i > 0 && matrix[i - 1][j] === 1)
+            count++;
+        if (j > 0 && matrix[i][j - 1] === 1)
+            count++;
+        if (i < GFG.R - 1 && matrix[i + 1][j] === 1)
+            count++;
+        if (j < GFG.C - 1 && matrix[i][j + 1] === 1)
+            count++;
+        return count;
+    };
+    GFG.findperimeter = function (matrix) {
+        var perimeter = 0;
+        for (var i = 0; i < GFG.R; i++)
+            for (var j = 0; j < GFG.C; j++)
+                if (matrix[i][j] === 1)
+                    perimeter += (4 - GFG.numofneighbour(matrix, i, j));
+        ;
+        ;
+        return perimeter;
+    };
+    GFG.main = function (args) {
+        var matrix = [[0, 1, 0, 0], 
+                      [1, 1, 1, 0], 
+                      [0, 1, 0, 0],
+                      [1, 1, 0, 0]];
+        document.write(GFG.findperimeter(matrix));
+    };
+    return GFG;
+}());
+GFG.R = 4;    // Array Size Declared 
+GFG.C = 5;
+GFG["__class"] = "GFG";
+GFG.main(null);
+
+   </script>
+</html>

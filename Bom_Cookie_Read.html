@@ -1,0 +1,51 @@
+<!-- ----------------------------------------------------------------------
+Program       :Bom Set Read Cookie
+Date          :06-08-2018
+Auther        :Sumit Patil
+Institute     :WSA
+------------------------------------------------------------------------ -->
+<html>
+    <head>
+        <title>Bom Set Read Cookie</title>
+        
+    </head>
+    <body><center>
+        <h1>Bom write Read Cookie</h1>
+      <button onclick="writeCookie()">Set Cookie</button>
+      <button onclick="readCookie()">Read Cookie</button>
+      
+    </body>
+    
+<script>
+    //Function to set / write cookie
+
+    function writeCookie()
+    {
+        document.cookie="username=WSA;";
+        document.cookie="expires=Tue,14 Oct 2014 20:23:32 GMT;";
+        document.cookie="path=/;";
+
+        alert(document.cookie);
+    }
+
+    //Function to get cookie
+    function readCookie()
+    {
+        var cookieVal=decodeURIComponent(document.cookie);
+        
+        //Dump all cookies in the console
+         console.log("All Cookies : "+ cookieVal);
+        
+        //Cookied are separate by ';',aplit them first
+        cookieArray=cookieVal.split(';');
+
+        for(var cIndex=0;cIndex < cookieArray.length; cIndex++)
+        {
+            //split them again by '=' to get name anf values
+            cookieName=cookieArray[cIndex].split('=')[0];
+            cookieValue=cookieArray[cIndex].split('=')[1];
+            document.write("Key is: "+cookieName + " and values is" + cookieValue + " <br>") ; 
+        }
+    }
+</script>
+</html>

@@ -1,0 +1,66 @@
+<!-- ----------------------------------------------------------------------
+Assignment No :46
+Program       :Write a program to 
+               a)First Create basic page in html that display text and images.
+               b)Track how many times user has visted your page by stroing this information in a cookie.
+               c)Display the information to the user ex:You have visted x number of times ! The current visite should included in this number
+               d)Display the user time and date last visted.
+               e)if this user is first visit display eg:You have never visted before
+Date          :10-08-2018
+Auther        :Sumit Patil
+Institute     :WSA
+------------------------------------------------------------------------ -->
+<html>
+
+    <body>
+
+        <img src="node.png" width="300px" height="300px">
+
+        <p>Hello Hi Thank You!</p>
+
+        <p id="cookieitem"></p>
+
+    </body>
+
+    <script>
+        
+        window.onload = function() {
+        
+                //Cookies are separated by ';', split them first
+
+                cookieArrayMain = document.cookie.split(';');
+
+                var cookiePara = document.getElementById("cookieitem");
+
+                if(cookieArrayMain.length>1) {
+
+                    var cookieArray = cookieArrayMain[(cookieArrayMain.length-2)].split("=");
+
+                    var dateCookie = cookieArrayMain[(cookieArrayMain.length-1)].split("=");
+
+                    var newNum = Number(cookieArray[1]);
+
+                    cookiePara.innerHTML = "You have visited " + newNum + " times!<br><br>Last Visited : " + dateCookie[1];
+
+                    newNum++;
+
+                    document.cookie = "visited="+newNum+";";
+
+                    document.cookie = "date="+new Date()+";";
+                }
+
+                else {
+
+                    cookiePara.innerHTML = "You have never visited before!"
+
+                    document.cookie = "visited=1;";
+
+                    document.cookie = "date="+new Date()+";";
+                }
+            }
+              
+
+    
+    </script>
+
+</html>

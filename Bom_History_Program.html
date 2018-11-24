@@ -1,0 +1,40 @@
+<!-- ----------------------------------------------------------------------
+Program       :Bom History Program  
+Date          :03-08-2018
+Auther        :Sumit Patil
+Institute     :WSA
+-------------------------------------------------------------------------- -->
+<html>
+    <head>
+        <title>Bom History Program</title>
+        
+    </head> 
+        <body>
+            <center>
+          <h1>Bom History Program</h1>
+          <h3>Don't Run Program Directly! Please Open The Browser In ctrl o than Open history File.html</h3>
+         
+        <p id="history"></p>
+          
+         <button onclick="getHistoryLength()">Get History Legth</button>
+         <button onclick="goBack()">Go Back</button>
+         
+        </body>
+        
+    <script>
+           function getHistoryLength()
+           {
+               hLength=window.history.length;
+               document.getElementById("history").innerHTML="The History length:"+hLength;
+           }
+
+
+         function goBack()
+         {
+             //window.history.back();
+             window.history.go(-2);
+         }
+    </script>
+ 
+  
+</html>

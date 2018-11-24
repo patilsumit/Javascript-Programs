@@ -1,0 +1,191 @@
+<!-- ----------------------------------------------------------------------
+Program       :Pizza Order Form
+Date          :07-08-2018
+Auther        :Sumit Patil
+Institute     :WSA
+------------------------------------------------------------------------ -->
+<html>
+    <head>
+        <title>Pizza Order Form</title>
+    </head>
+    <body>
+            <center>
+          <h1>Pizza Order Form</h1>
+          <form  name="PizzForm"  onsubmit="return pizzaValidateForm()">      
+          <table border="0" cellspacing="5" cellpadding="3">
+              <tr>
+                    <td>User Name:</td>
+                    <td><input type="text"  size="40" id="txtuname" placeholder="User Name" minlength="8"></td>
+              </tr>
+              <tr>
+                    <td>Email:</td>
+                    <td><input type="text" id="txtemail" size="40" placeholder="Email"></td>
+              </tr>
+              <tr>
+                    <td>Password:</td>
+                    <td><input type="password"  size="40" id="txtpwd" placeholder="Pass Word" minlength="6" maxlength="20" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" 
+                        title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" ></td>
+              </tr>
+              <tr>
+                    <td>Conform Password:</td>
+                    <td><input type="password"  size="40" name="txtcpwd" placeholder="Conform Pass Word"></td>
+               
+                </tr>
+              <tr>
+                    <td>BirthDate:</td>
+                    <td><input type="date" id="txtdate"  placeholder="Birth Date"></td>
+              </tr>
+              <tr>
+                    <td>Pizza Type:</td>
+                    <td>
+                   Simply Veg <input type="radio"  name="rdpt">
+                   Veg Supreme<input type="radio"  name="rdpt">
+                   Veg Delight<input type="radio"  name="rdpt">
+                    </td>
+              </tr>
+              <tr>
+                    <td>Pizza Size:</td>
+                    <td>
+                   Personal Pan<input type="radio"   name="rdps">
+                   Medium<input type="radio"  name="rdps">
+                   large<input type="radio"  name="rdps">
+                    </td>
+              </tr>
+              <tr>
+                    <td>Pizza Crust:</td>
+                    <td>
+                   Thin<input type="radio"  name="rdpc">
+                   Normal<input type="radio"  name="rdpc">
+                   Special<input type="radio"  name="rdpc">
+                    </td>
+              </tr>
+              <tr>
+                    <td>Pizza Coupan Code:</td>
+                    <td>
+                 
+                 <input type="text" id="pizdis">
+                    </td>
+              </tr>
+              <tr>
+                    <td>Payment:</td>
+                    <td>
+                        <select id="payment">
+                            <option value=""></option>
+                            <option value="1">COD</option>
+                            <option value="2">Credit Card</option>
+                             <option value="3">PayTM</option>
+                            <option value="4">Debit Card</option>
+                        </select>
+                    </td>
+              </tr>
+              
+              <tr>
+                  <td>Mobile Number:</td>
+                  <td>
+                      <input type="text" name="txtmobile" size="40" maxlength="10" placeholder="Mobile" 
+                       >
+                  </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                    <input type="checkbox" id="chktc" name="chktc" value="Agree" title="please Accept Terms and Condition">Accept All the Terms and Condition
+                    </td>
+                </tr>
+                <tr style="text-align:center ">
+                    <td colspan="2"><input type="submit" id="btnsubmit"  value="submit">
+                        <input type="reset" id="btnreset" value="reset">
+                    </td>
+                </tr>
+          </table>   
+          </form>
+        </body>
+    
+   <script type="text/javascript">
+  var uname=document.forms['PizzForm']['txtuname'];
+  var emailid=document.forms['PizzForm']['txtemail'];
+  var pwd=document.forms['PizzForm']['txtpwd'];
+  var cpwd=document.forms['PizzForm']['txtcpwd'];
+  var dob=document.forms['PizzForm']['txtdate'];
+  var ptype=document.forms['PizzForm']['rdpt'];
+  var psize=document.forms['PizzForm']['rdps'];
+  var pcrust=document.forms['PizzForm']['rdpc'];
+  var pizd=document.forms['PizzForm']['pizdis'];
+  var pt=document.forms['PizzForm']['payment'];
+  var mobile=document.forms['PizzForm']['txtmobile'];
+  var chkboxtc=document.forms['PizzForm']['chktc'];
+
+  var emailrexExp=/^[a-z]+([0-9]+)?\@[a-z]+\.[a-z]{2,4}$/;
+
+  var PizdissregExp=/PIZDIS[7-8][0-9]{2}$/;
+
+  var mobileregExp=/^[0-9]{10}$/;
+  
+  function pizzaValidateForm()
+  {
+      
+     if(uname.value=="")
+     {
+        alert("Please enter username");
+        return false
+     }
+    
+     if(emailrexExp.test(emailid.value)==false)
+     {
+          alert("email");
+          
+          return false;
+     }
+     if(pwd.value == "" || cpwd.value == "")
+     {
+        alert("Please enter password & conform password");
+        return false;
+     }
+     if(pwd.value != cpwd.value)
+     {
+         alert("Password Not matched");
+         return false;
+     }
+     if(dob.value == "")
+     {
+       alert("Please enter birthdate");
+       return false;
+     }
+     if(ptype[0].checked==false && ptype[1].checked==false && ptype[2].checked==false)
+     {
+       alert("please checked pizza type");
+       return false;
+     }
+     if((psize[0].checked==false) && (psize[1].checked==false) && (psize[2].checked==false))
+     {
+        alert("please checked pizza size");
+        return false;
+     }
+     if(pcrust[0].checked==false && pcrust[1].checked==false && pcrust[2].checked==false)
+     {
+        alert("please checked pizza crust");
+        return false;
+     }
+     if(PizdissregExp.test(pizd.value)==false)
+     {
+       alert("Please Enter Correct Coupan Code");
+       return false;
+     }
+     if(pt.value==0)
+     {
+        alert("please select payment type");
+        return false;
+     }
+     if(mobileregExp.test(mobile.value)==false)
+     {
+            alert("please enter perfect mobile number");
+            return false;
+     }
+     if(chkboxtc.checked==false)
+     {
+         alert("Please Accept Terms And Condition");
+         return false;
+     }
+        return true;
+  }
+   </script>
+</html>

@@ -1,0 +1,42 @@
+<!-- ----------------------------------------------------------------------
+Assignment No :Classroom
+Program       :Function Palindrome Program
+Date          :28-06-2018
+Auther        :Sumit Patil
+Institute     :WSA
+------------------------------------------------------------------------ -->
+<html>
+  <script>
+    var myNum=Number(prompt("Enter Number:"));
+    function myNumPalin(myNum)
+    {
+      var copyNum=myNum;
+      var revNum=0;
+      var remainder=0;
+  
+      
+      while(myNum!=0)
+      {
+
+        remainder = myNum % 10;
+        revNum= revNum * 10 + remainder;
+        
+        myNum=(myNum - remainder) / 10;    
+      }
+        myResult= copyNum==revNum ? true : false;
+        return (myResult);
+    }
+    
+
+  //myNumPalin(myNum);
+
+   if(myNumPalin(myNum)==true)
+   {
+       document.write("Panlindrome");
+   }
+   else
+   {
+       document.write("Not Palindrome");
+   } 
+ </script>
+</html>

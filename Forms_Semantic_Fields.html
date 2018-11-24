@@ -1,0 +1,75 @@
+<!-- ----------------------------------------------------------------------
+Program       :Forms Semantic Fields
+Date          :07-08-2018
+Auther        :Sumit Patil
+Institute     :WSA
+------------------------------------------------------------------------ -->
+<html>
+    <head>
+        <title>Forms Semantic Fields</title>
+    </head>
+    <body><center>
+      <h1>Forms Semantic Fields</h1>
+    <form name="myForm1" onsubmit="return validateForm()">
+    Name : <input type="text" name="username" maxlength=15><br>
+    Email : <input type="email" name="email"><br>
+    Phone : <input type="text" name="phone" placeholder="10 digit mobile number" minlength="10" maxlength="10" title="please enter mobile number"><br>
+    Number: <input type="text" name="num"><br>
+    TextArea: <Textarea name="txtarea" rows="5" cols="20"></Textarea><br>
+    <input type="submit" value="Submit"><br>
+    <input type="reset" value="Reset Form">
+
+    </form>
+    </body>
+    
+   <script>
+     function validateForm()
+     {
+         var uname=document.myForm1.username.value;
+         var emailId=document.myForm1.email.value;
+         var phoneNo=document.myForm1.phone.value;
+         var num=document.myForm1.num.value;
+         var area=document.myForm1.txtarea.value;
+        
+         var regExp=/[0-9]+$/;
+         if(uname.length==0)
+         {
+           alert("Please Enter User Name:");
+           return false;
+         }
+         else if(emailId.length==0)
+         {
+            alert("Please Enter Email Id:");
+            return false;
+         }
+         else if(phoneNo.length==0)
+         {
+           alert("Please Enter Phone Number");
+           return false;
+         }
+         else if(num.length==0)
+         {
+             alert("Please Enter Number");
+             return false;
+         }
+         else if(regExp.tsssest(num))
+         {
+           // alert("Number Is Matched");
+            return false;
+         }
+         else if(area.length==0)
+         {
+          alert("Please enter text");
+          return false;
+         }
+         else
+         {
+         alert("Entered Username: " + uname);
+         alert("Entered Email-Id: " + emailId);
+         alert("Entered Phone:    " + phoneNo);
+         alert("Entered number:"+num);
+         
+         }
+     }
+   </script>
+</html>

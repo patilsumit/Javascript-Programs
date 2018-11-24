@@ -1,0 +1,55 @@
+<!-- ----------------------------------------------------------------------
+Assignment No :43
+Program       :Write a program 
+               a) To Make a paragraph using createElement Method.
+               b) Create a new node with nav element.
+               c) Create a TextNode With <strong> element.
+               d) Add a two node with parent node.
+Date          :04-08-2018
+Auther        :Sumit Patil
+Institute     :WSA
+------------------------------------------------------------------------ -->
+<html>
+    <head>
+        <title>Create Element Para Nav Strong </title>
+        <style type="text/CSS">
+        </style>
+    </head>
+    <body>
+        <center>
+            <h1>Create Para Nav And Strong Element</h1>
+        <input type="image" src="button_node.png" id="createParaNode">
+        <input type="image" src="button_nav.png" id="createNavNode">
+        <input type="image" src="button_strong.png" id="createStrongNode">
+    </body>
+    
+<script>
+     createParaNode.addEventListener("click",createPara);
+    function createPara()
+    {
+        var createPara=document.createElement("p");
+        var textNode=document.createTextNode(prompt("Enter Paragraph:"));
+        createPara.appendChild(textNode);
+        document.body.appendChild(createPara);
+    }
+    createNavNode.addEventListener("click",createNav);
+    function createNav()
+    {
+        var createNav=document.createElement("a");
+        var textNode=document.createTextNode(prompt("Enter Nav Text:"));
+        createNav.appendChild(textNode);
+        createNav.href="http://www.app-u.co.in"
+        document.body.appendChild(createNav);
+    }
+    createStrongNode.addEventListener("click",createStrong);
+    function createStrong()
+    {
+        var createStrong=document.createElement("strong");
+        var textNode=document.createTextNode(prompt("Enter Strong Text:"));
+        createStrong.appendChild(textNode);
+        document.body.appendChild(createStrong);
+    }
+  
+  
+</script>
+</html>

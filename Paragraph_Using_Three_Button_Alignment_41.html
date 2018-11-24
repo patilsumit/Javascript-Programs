@@ -1,0 +1,56 @@
+<!-- ----------------------------------------------------------------------
+Assignment No :41
+Program       :Write a JavaScript program
+              a) To create three paragarph
+              b) Create three buttons left ,right and center.
+              c) Dynamically change the allignment of paragraph by using the getElementByTagName().
+Date          :26-07-2018
+Auther        :Sumit Patil
+Institute     :WSA
+------------------------------------------------------------------------ -->
+<html>
+<head>
+    <title>Left Rigth Center</title>
+</head>
+
+    <body>
+        <div id="div1">
+                A home, or domicile, is a living space used as a permanent or semi-permanent residence for an individual, family, household or several families in a tribe. It is often a house, apartment, or other building, or alternatively a mobile home, houseboat, yurt or any other portable shelter. A principle of constitutional law in many countries, related to the right to privacy enshrined in article 12 of the Universal Declaration of Human Rights[1] is the inviolability of the home as an individual's place of shelter and refuge.
+                A home, or domicile, is a living space used as a permanent or semi-permanent residence for an individual, family, household or several families in a tribe. It is often a house, apartment, or other building, or alternatively a mobile home, houseboat, yurt or any other portable shelter. A principle of constitutional law in many countries, related to the right to privacy enshrined in article 12 of the Universal Declaration of Human Rights[1] is the inviolability of the home as an individual's place of shelter and refuge.
+               <p> A home, or domicile, is a living space used as a permanent or semi-permanent residence for an individual, family, household or several families in a tribe. It is often a house, apartment, or other building, or alternatively a mobile home, houseboat, yurt or any other portable shelter. A principle of constitutional law in many countries, related to the right to privacy enshrined in article 12 of the Universal Declaration of Human Rights[1] is the inviolability of the home as an individual's place of shelter and refuge.
+                A home, or domicile, is a living space used as a permanent or semi-permanent residence for an individual, family, household or several families in a tribe. It is often a house, apartment, or other building, or alternatively a mobile home, houseboat, yurt or any other portable shelter. A principle of constitutional law in many countries, related to the right to privacy enshrined in article 12 of the Universal Declaration of Human Rights[1] is the inviolability of the home as an individual's place of shelter and refuge.
+                A home, or domicile, is a living space used as a permanent or semi-permanent residence for an individual, family, household or several families in a tribe. It is often a house, apartment, or other building, or alternatively a mobile home, houseboat, yurt or any other portable shelter. A principle of constitutional law in many countries, related to the right to privacy enshrined in article 12 of the Universal Declaration of Human Rights[1] is the inviolability of the home as an individual's place of shelter and refuge.
+                A home, or domicile, is a living space used as a permanent or semi-permanent residence for an individual, family, household or several families in a tribe. It is often a house, apartment, or other building, or alternatively a mobile home, houseboat, yurt or any other portable shelter. A principle of constitutional law in many countries, related to the right to privacy enshrined in article 12 of the Universal Declaration of Human Rights[1] is the inviolability of the home as an individual's place of shelter and refuge.
+
+        </div>
+        <input type="button" id="btnleft" onclick="left();" value="left">
+        <input type="button" onclick="center();" value="center">
+        <input type="button" onclick="right();" value="right">
+        
+    </body>
+    <script>
+            var x= document.getElementsByTagName("div");
+    
+            function left()
+            {
+             for(i=0;i<x.length;i++)
+             {
+                x[i].style.textAlign="left";
+             }
+            }
+            function right()
+            {
+             for(i=0;i<x.length;i++)
+             {
+                x[i].style.textAlign="right";
+             }
+            }
+            function center()
+            {
+             for(i=0;i<x.length;i++)
+             {
+                x[i].style.textAlign="center";
+             }
+            }
+           </script>
+</html>

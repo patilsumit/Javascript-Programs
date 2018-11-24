@@ -1,0 +1,40 @@
+<!-- ----------------------------------------------------------------------
+Assignment No :17
+Program       :Write a program to generate armstrong number of three digits.
+Date          :27-06-2018
+Auther        :Sumit Patil
+Institute     :WSA
+------------------------------------------------------------------------ -->
+<html>
+<script>
+
+var myNum=Number(prompt("Enter Number1:"));
+var myNum2=Number(prompt("Enter Number2:"));
+sum=0;
+
+for(i=myNum;i<=myNum2;i++)
+{
+  cpNum=i;
+   //copy Number
+  for(j=0;cpNum!=0;j++)
+  {
+      //Armstrong Logic
+     reminder=cpNum % 10;
+     sum=Math.pow(reminder,3) +sum;
+     cpNum=(cpNum - reminder) / 10;
+  }
+  if(i==sum)
+  {
+       document.write(i +" ");
+       
+  }
+     sum=0;
+    
+}
+
+
+</script>
+<Body>
+    
+    </Body>
+</html>

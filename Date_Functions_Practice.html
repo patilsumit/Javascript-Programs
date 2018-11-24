@@ -1,0 +1,43 @@
+<!-- ----------------------------------------------------------------------
+Program       :Date Function Practish
+Date          :27-06-2018
+Auther        :Sumit Patil
+Institute     :WSA
+------------------------------------------------------------------------ -->
+<html>
+<script>
+  
+//--------------------Date Function Object-------------------------
+var today =new Date();
+var msg=today.toLocaleString();
+ document.write("The Current Time & Date: "+msg+"<br>");
+
+//--------
+var d=new Date(2018,8,21,12,35,55);
+var mg=d.toLocaleString();
+document.write("Date:"+mg+"<br>");
+// toUtcString() method converts display standard time
+
+document.write("toUtcString:"+today.toUTCString()+"<br>");
+
+var s=new Date("2018-05-25");
+document.write("toDateString:"+s.toDateString()+"<br>");//Display Standard time
+
+document.write("ISO Date:"+s+"<br>");//Display ISO Date
+
+var p=new Date("03/25/2015");
+document.write("Short Date:"+p+"<br>");
+//-------
+var q=new Date("Mar 25 2019");
+document.write("Long Date:"+q+"<br>");
+
+
+
+
+
+ 
+
+  
+ document.write(today);
+ </script>
+</html>

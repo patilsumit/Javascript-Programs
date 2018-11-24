@@ -1,0 +1,55 @@
+<!-- ----------------------------------------------------------------------
+Assignment No :2
+Program       :Write a Javascript program to design a nim game.
+Date          :29-06-2018
+Auther        :Sumit Patil
+Institute     :WSA
+------------------------------------------------------------------------ -->
+<html>
+<script>
+    
+    var totalStones = Number(prompt("Enter the total Numbers"));
+    var userA , userB;
+    var gameStones = totalStones;
+
+    var a= "ENter the player A value"
+    var b = "Enter The Player B value"
+
+
+while (gameStones > 4)
+      {
+          for (iLoop = 1; iLoop <= totalStones ;iLoop++)
+          {
+            userA = myCalc(a);
+            gameStones = gameStones - userA;
+            if(gameStones <=3)
+            {
+                document.write("The palyer B wins");
+                break;
+            }
+
+            userB = myCalc(b);
+            gameStones = gameStones - userA;
+            if(gameStones <=3)
+            {
+                document.write("The Player A wins");
+                break;
+            }
+          }
+       }
+
+
+     function myCalc(x){
+        totalValue = Number(prompt(x));
+        if (totalValue <= 3)
+        {
+            return totalValue;
+        }
+        else{
+            y=x;
+            alert("Enter number within 1 to 3");
+            myCalc(y);
+        }
+     } 
+</script>
+</html>

@@ -1,0 +1,64 @@
+<!-- ----------------------------------------------------------------------
+Program       :Write a Javascript Program Intersection & Union Array. 
+Date          :06-07-2018
+Auther        :Sumit Patil
+Institute     :WSA
+--------------------------------------------------------------- -->
+<html>
+<script>
+   var myArray1=[10,20,30,40,50];
+   var myArray2=[30,35,40,60,70,90,100];
+
+   debugger;
+    function UnionArray()
+    {
+      var sameNum=[];
+      document.write("The array is:"+myArray1);
+     for(i=0;i<myArray2.length;i++)
+     {
+        for(j=0;j<myArray1.length;j++)
+        {
+          if(myArray2[i] == myArray1[j])
+          {
+             break;
+             
+            // sameNum[i]=myArray2[i];  
+          }
+        }
+        if(myArray2[i]!=myArray1[j])
+        {
+           document.write(" "+myArray2[i]+"<br>");
+        }
+     }
+    }; 
+   
+    function IntersectionArray()
+    {
+      var sameNum=[];
+      document.write("The intersection number  is:");
+     for(i=0;i<myArray2.length;i++)
+     {
+        for(j=0;j<myArray1.length;j++)
+        {
+          if(myArray2[i] == myArray1[j])
+          {
+             
+             sameNum[i]=myArray2[i];  
+          }
+        }
+        
+        
+     }
+     document.write("Intersection:"+sameNum+"<br>");
+    }; 
+   
+  
+  //----------------------------
+  
+  UnionArray(myArray1,myArray2);
+  IntersectionArray(myArray1,myArray2);
+//var union = [...new Set([...myArray1, ...myArray2])];
+
+//document.write("Union:"+union+"<br>");     
+</script>
+</html>

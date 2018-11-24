@@ -1,0 +1,23 @@
+<!-- ----------------------------------------------------------------------
+Program       :Array Filter Api Method Practice 
+Date          :12-07-2018
+Auther        :Sumit Patil
+Institute     :WSA
+-------------------------------------------------------------------------- -->
+<html>
+<script>
+    var myString="what is what so what so";
+    var splitStr=myString.split(' ');
+ 
+    
+    var result=splitStr.filter(function(elem,index,itself)
+    {
+        
+        return index==itself.indexOf(elem);
+    });
+
+    document.write("Filter Array:"+result+"<br>");
+
+     
+</script>
+</html>

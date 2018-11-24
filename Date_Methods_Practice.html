@@ -1,0 +1,90 @@
+<!-- ----------------------------------------------------------------------
+Program       :Date Methods Practish
+Date          :21-07-2018
+Auther        :Sumit Patil
+Institute     :WSA
+------------------------------------------------------------------------ -->
+<html>
+<script>
+  
+//--------------------JavaScript Get Date Function Object-------------------------
+var s=new Date();//getTime() function returns the number of milliseconds since
+document.write("getTime():"+s.getTime()+"<br>");
+
+document.write("getFullYear():"+s.getFullYear()+"<br>");//return full year of date
+
+document.write("getMonth():"+s.getMonth()+"<br>");//return month date month 0-11
+
+var months = ["January","February","March","April","May","June","July","August",
+              "September","October","November","December"];
+document.write("getMonthArray:"+months[s.getMonth()]+"<br>");//array to display a month
+
+document.write("getDate():"+s.getDate()+"<br>");//returns date as number
+
+document.write("getHours():"+s.getHours()+"<br>");//return the hours as number
+
+document.write("getMinutes():"+s.getMinutes()+"<br>");//returns the miniutes as number
+
+document.write("getSecond():"+s.getSeconds()+"<br>");//returns the second as number
+
+document.write("getMillsecond():"+s.getMilliseconds()+"<br>");//return the millisecond as number
+
+document.write("getDay():"+s.getDay()+"<br>");//returns the weekday of a date as a number (0-6)
+ 
+var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+document.write("Array getDay():"+days[s.getDay()]+"<br><br>");//array of names, and getDay() to return the weekday as a name
+
+//------------------Same as get Date(), but returns the UTC date in getUTC() method
+document.write("------------Set Methods-------------"+"<br><br>");
+//--------------------JavaScript Set Date Function Object-------------------------
+ 
+ var d=new Date();
+ d.setFullYear(2020);
+ document.write("setFullYear():"+d+"<br>");//set the Full Year 
+ //Please note that month counts from 0. December is month 11:
+ //method can optionally set month and day.
+ d.setFullYear(2020,11,3);
+ document.write("setFullYear():"+d+"<br>");
+
+ d.setMonth(8);
+ document.write("setMonth():"+d+"<br>");//set the month
+ 
+ d.setDate(24);
+ document.write("setDate():"+d+"<br>");//set the date
+ 
+ d.setDate(d.getDate() + 50)
+ document.write("SetDate() With getdate():"+d+"<br>");//Add the days
+
+ d.setHours(19);
+ document.write("setHours():"+d+"<br>");//set the hours
+
+ d.setMinutes(30);//set the Miniutes
+ document.write("setMinutes"+d+"<br>");//set the Miniutes
+
+ d.setSeconds(30);//Set the seconds
+ document.write("setecond():"+d+"<br>");
+
+//Comapre Between Two Dates
+debugger;
+var today, someday, text;
+today = new Date(2018,05,25);
+someday = new Date();
+someday.setFullYear(2100, 0, 14);
+
+
+if (someday >today) {
+    text = "Today is before January 14, 2100.";
+} else {
+    text = "Today is after January 14, 2100.";
+}
+    document.write("Date compare:"+text+"<br><br>");
+
+//-------------Another toString() Method------------
+document.write("----------toString() Method------------"+"<br><br>");
+var dt=new Date(1997,6,24 ,01,00,10);
+document.write("toString():"+dt.toString()+"<br>");
+document.write("toDateString():"+dt.toDateString()+"<br>");
+
+document.write();
+ </script>
+</html>

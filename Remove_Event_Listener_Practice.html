@@ -1,0 +1,47 @@
+<!-- ----------------------------------------------------------------------
+Program       :Remove Event Listeners
+Date          :24-07-2018
+Auther        :Sumit Patil
+Institute     :WSA
+-------------------------------------------------------------------------- -->
+<html>
+    <head>
+        <title>Remove Event Listeners</title>
+   
+        <body>
+                <p id="para">EventListener works on document ! Click and Check.</p>
+                <button onclick="removeHandler()" >remove Handler</button>
+                <button onclick="addHandlerAgain()">Add Again</button>
+        </body>
+    <script>
+        var count=1;
+        document.addEventListener("mousemove",myEventHandler);
+        
+        
+        function myEventHandler()
+        {
+            if(count % 2 == 0)
+            {
+                document.body.style.backgroundColor="orange";
+            }
+            else
+            {
+                document.body.style.backgroundColor="green";
+            }
+          count++;   
+        }
+
+        function removeHandler()
+        {
+            document.removeEventListener("mousemove",myEventHandler);
+        }
+
+        function addHandlerAgain()
+        {
+            document.addEventListener("mousemove",myEventHandler);
+        }
+    </script>
+    </head>
+   
+
+</html>

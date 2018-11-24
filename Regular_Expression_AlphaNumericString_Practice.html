@@ -1,0 +1,27 @@
+<!-- ----------------------------------------------------------------------
+Program       :Regular Program Print alphaNumeric String
+Date          :17-07-2018
+Auther        :Sumit Patil
+Institute     :WSA
+------------------------------------------------------------------------ -->
+<html>
+    <body>
+    <script>
+        //Given Input is alphaNumeric String
+        function alphanumeric_case(num)
+        {
+            var reg=/^[A-Z]+[a-z]+[0-9]+/;
+            if(reg.test(num))
+            {
+               console.log("**String Is AlphaNumeric");
+            }
+            else
+            {
+                console.log("**String Is Not AlphaNumeric");
+            }
+        }
+        alphanumeric_case("Sumit123");
+         
+    </script>
+    </body>
+    </html> 

@@ -1,0 +1,38 @@
+n<!-- ----------------------------------------------------------------------
+Program       :Regular Program Print Piza Discont Card Validate
+Date          :18-07-2018
+Auther        :Sumit Patil
+Institute     :WSA
+------------------------------------------------------------------------ -->
+<html>
+    <body>
+    <script>
+        //Given Input is Discount Copun validate 
+        
+        function mobileNumber_case(num)
+        {
+            var regexp=/^(PIZDIS)[0-9]{3}$/;
+           
+            if(regexp.test(num))
+            {
+                var strLen=x.substr(6);
+                   if(strLen>=600 && strLen<=750)
+                   {
+                    document.write("Elegibal For Discount");
+                   }
+                   else
+                   {
+                    document.write("Elegibal For Not Discount");
+                   }
+            }
+            else
+            {
+                console.log("PizDis Is Not Validate");
+            }
+        };
+        var x= 'PIZDIS704';
+        mobileNumber_case(x);
+         
+    </script>
+    </body>
+    </html> 

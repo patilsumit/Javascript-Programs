@@ -1,0 +1,39 @@
+<!-- ----------------------------------------------------------------------
+Program       :Write a Javascript Program Perfect Number. 
+Date          :10-07-2018
+Auther        :Sumit Patil
+Institute     :WSA
+--------------------------------------------------------------- -->
+<html>
+<script>
+
+
+var myNum=Number(prompt("Enter Number:"));
+document.write("Number Is:"+myNum+"<br>");
+var sum=0;
+debugger;
+for(i=1;i<myNum;i++)
+{
+   if(myNum %i == 0)
+   {
+       
+     document.write("Factors:"+i+"<br>");  //Display The Factors
+     sum= sum + i;
+       
+   } 
+ 
+}
+document.write("------Addition------"+"<br>");
+document.write("Sum:"+sum+"<br>");  
+document.write("----Perfect Or Not-----"+"<br>");  
+ if(sum==i)
+ {
+     document.write("Number Is Perfect Number");
+ }
+ else
+ {
+     document.write("Number Is Not Perfect Number");
+ }
+ 
+</script>
+</html>

@@ -1,0 +1,32 @@
+<!-- ----------------------------------------------------------------------
+Assignment No :Classroom
+Program       :Method Invocation BMI Program
+Date          :03-07-2018
+Auther        :Sumit Patil
+Institute     :WSA
+------------------------------------------------------------------------ -->
+<html>
+<script>
+    debugger;
+    var obj={Height:2 ,Weight:50,Qualification:"M-Tech",
+        getBMI:function()
+        {
+            return this.bmiValue = this.Weight / (this.Height * this.Height);
+            
+        },
+        getQualification:function()
+        {
+            if(this.Qualification=="B-Tech")
+            {
+               return "Bachaler Student";
+            }
+            else
+            {
+                return "Master Student";
+            }
+        }
+    };
+    document.write("BMI IS:" + obj.getBMI()+"<br>");
+    document.write("BMI IS:" + obj.getQualification());
+</script>
+</html>

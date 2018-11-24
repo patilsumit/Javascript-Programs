@@ -1,0 +1,36 @@
+<!-- ----------------------------------------------------------------------
+Program       :String Slice Classroom Practice
+Date          :12-07-2018
+Auther        :Sumit Patil
+Institute     :WSA
+------------------------------------------------------------------------ -->
+<html>
+
+<body>
+    <script>
+    
+var str="hello World Welcome to JS";
+
+var sliceofStr=str.slice(1,8);
+document.write("Sliced String is:"+sliceofStr+"<br>");
+
+var substr=str.slice(10,0);
+document.write("Sub String when frist index is larger than second index"+substr+"<br>");
+
+var subStr=str.slice(3);
+document.write("Sub String passed with one index:"+subStr+"<br>");
+
+var substr=str.slice(-3);//Display [length - -3] ex: 24 -3 = 21 after char print
+document.write("Sub String Passed -Negative Index:"+substr+"<br>");
+
+var substr=str.slice(-3,2);
+document.write("Substring passed negative And Positive Index:"+substr+"<br>");
+
+var substr=str.slice(2,-3);//that means start with 2 char remove and last 3 char rermove
+document.write("Substring passed Positive And Negative Index:"+substr+"<br>");
+
+var substr=str.slice(-3,-5);//both 0
+document.write("Both Index Are Negative:"+substr+"<br>");
+    </script>
+</body>
+</html>

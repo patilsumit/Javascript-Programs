@@ -1,0 +1,31 @@
+<!-- ----------------------------------------------------------------------
+Assignment No :Classroom
+Program       :Function Addition recursion Program
+Date          :04-07-2018
+Auther        :Sumit Patil
+Institute     :WSA
+------------------------------------------------------------------------ -->
+<html>
+<script>
+    debugger;
+    
+    function sumDigits(number)
+    {
+  
+      var digit = Number(String(number).slice(0,1));
+      number = Number(String(number).slice(1));
+  
+  
+      if (! number)
+      {
+          return digit;
+      }
+      else
+      {
+          return digit + Number(sumDigits(number));
+      }
+  
+    }
+document.write("Final Answer"+sumDigits(12345)) ;  
+</script>
+</html>

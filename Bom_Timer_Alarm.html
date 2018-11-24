@@ -1,0 +1,39 @@
+<!-- ----------------------------------------------------------------------
+Program       :Bom Timer Alarm
+Date          :06-08-2018
+Auther        :Sumit Patil
+Institute     :WSA
+------------------------------------------------------------------------ -->
+<html>
+    <head>
+        <title>Bom Timer Alarm</title>
+        
+    </head>
+    <body><center>
+        <h1>Bom Timer Alarm</h1>
+      <button onclick="myReminderSet()">ReminderSet</button>
+      <button onclick="myReminderClear()">ReminderClear</button>
+      <button onclick="myAlarmSet()">Set Alarm</button>
+    </body>
+    
+<script>
+    var timerId;
+
+    function myReminderSet()
+    {
+        timeValue=parseInt(prompt("Enter Your Reminder Duration,in millisecond"));
+        timerId=setInterval("alert('Procrastination is a gift...keep snoozing')",timeValue);
+    }
+
+    function myReminderClear()
+    {
+        clearInterval(timerId);
+    }
+
+    function myAlarmSet()
+    {
+        timeValue=parseInt(prompt("Enter Your alarm duration, in millisecond"));
+        timerId=setTimeout("alert('Get up...make things happen')",timeValue);
+    }
+</script>
+</html>

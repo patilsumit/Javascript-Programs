@@ -1,0 +1,34 @@
+<!-- ----------------------------------------------------------------------
+Program       :Closure of Function
+Date          :08-08-2018
+Auther        :Sumit Patil
+Institute     :WSA
+------------------------------------------------------------------------ -->
+<html>
+    <head>
+        <title>Closure of Function</title>
+    </head>
+    <body>
+            <center>
+          <h1>Closure of Function</h1>
+          
+        </body>
+    
+   <script type="text/javascript">
+       var y=10;
+       function foo()
+       {
+           var z=20;
+           function boo()
+           {
+               var x=100;
+               document.write("x:"+x+"<br>");
+           document.write("y:"+y+"<br>");
+           document.write("z:"+z+"<br>");
+           }
+           boo();
+           
+       };
+      foo();
+   </script>
+</html>

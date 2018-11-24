@@ -1,0 +1,45 @@
+<!-- ----------------------------------------------------------------------
+Program       :Write a Javascript Program Matrix Diagonal Addition Operation using 2D Array. 
+Date          :10-07-2018
+Auther        :Sumit Patil
+Institute     :WSA
+--------------------------------------------------------------- -->
+<html>
+<script>
+
+var a=[[0,1,2],[3,4,5],[6,7,8]];
+
+var i,j;
+var sum=0;
+
+debugger;
+for(i=0;i<a.length;i++)
+{
+   for(j=0;j<a.length;j++)
+   {
+     document.write(a[i][j] +" "); 
+   }
+   document.write("<br>");
+}
+document.write("------------"+"<br>");
+for(i=0;i<a.length;i++)
+{
+    for(j=0;j<a.length;j++)
+    {
+       if(a[i]==a[j])
+       {
+          sum =sum + a[i][j];
+          
+          document.write(a[i][j]);
+         
+       }
+    }
+    document.write("<br>");
+}
+
+document.write("Diagonal Addition:"+sum);
+
+
+  
+</script>
+</html>

@@ -1,0 +1,31 @@
+<!-- ----------------------------------------------------------------------
+Assignment No :23
+Program       :Given an array of 2n integers, write a JavaScript program to find sum of min(ai, bi).
+Date          :05-07-2018
+Auther        :Sumit Patil
+Institute     :WSA
+------------------------------------------------------------------------ -->
+<html>
+    <script>
+        debugger;
+         
+        function minSum(randomArr){                                  
+             var min =0;
+                for (jLoop = 0; jLoop < randomArr.length-1; jLoop++){
+                    if(randomArr[jLoop] < randomArr[jLoop+1]){      // to check more or less    
+                         min = min+randomArr[jLoop];                   // to add minimum numbers
+                        
+             }
+                    else{
+                       min = min + randomArr[jLoop+1]; 
+                                  // to add minimun numbers
+            } jLoop++ ;
+                }
+                
+                return min;                                        // to return minimum value
+            }
+            
+            
+        userList = [1,2,3,4,5,6];
+       document.write(minSum(userList));                     // to print the result
+    </script></html>

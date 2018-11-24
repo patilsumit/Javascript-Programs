@@ -1,0 +1,37 @@
+<!-- ----------------------------------------------------------------------
+Assignment No :PG
+Program       :String index Of Method Practish
+Date          :27-06-2018
+Auther        :Sumit Patil
+Institute     :WSA
+------------------------------------------------------------------------ -->
+<html>
+<script>
+  //alert("This IS a string Example");
+ var myString="Hello World Sumit !";
+ 
+  document.write("Index Of:"+myString.indexOf(" ")+"<br>");
+   
+   var fristSpace=myString.indexOf(" ");  //count source postion to space
+   var myResult=myString.substring(fristSpace + 1 );
+   document.write("Ans:"+myResult+"<br>");
+
+   var str = "Please locate where 'locate' occurs!";
+    var pos=str.indexOf('locate',15);//2nd Parameter index start the search this location
+    document.write("Postion wise Index:"+pos+"<br>");
+
+    var Input="abc.efg@gmail.com";
+    document.write(Input +"<br>");
+    var ip=Input.indexOf("@");
+    var userName=Input.substr(0,ip);
+    document.write("UserName:"+userName+"<br>");
+    var domainName=Input.substr(ip +1);
+    document.write("DomainName:"+domainName+"<br>");
+
+    document.write("LastIndexof:"+myString.lastIndexOf("Sumit")+"<br>");  
+
+
+
+
+ </script>
+</html>

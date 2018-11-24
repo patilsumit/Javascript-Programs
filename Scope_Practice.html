@@ -1,0 +1,33 @@
+<!-- ----------------------------------------------------------------------
+Assignment No :Classroom
+Program       :Scope Practice
+Date          :10-07-2018
+Auther        :Sumit Patil
+Institute     :WSA
+------------------------------------------------------------------------ -->
+<html>
+
+<body>
+    <p id="demo"></p>
+   <p id="demo1">
+    <script>
+            var car="Volvo";  //Global variable Declare
+            function myFunction()
+            {
+             document.getElementById("demo").innerHTML="I can Display" + car;
+            };
+            
+            myFunction1();
+            document.getElementById("demo1").innerHTML = "I can display " + company;
+
+          
+            function myFunction1()
+            {
+                 company = " tcs "; //Not Define Variable Get the access global variable
+            }
+           
+            myFunction();
+           
+    </script>   
+</body>
+</html>

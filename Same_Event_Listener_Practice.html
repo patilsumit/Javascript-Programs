@@ -1,0 +1,31 @@
+<!-- ----------------------------------------------------------------------
+Program       :Same Event Listeners
+Date          :24-07-2018
+Auther        :Sumit Patil
+Institute     :WSA
+-------------------------------------------------------------------------- -->
+<html>
+    <head>
+        <title>Same Event Listeners</title>
+   
+        <body>
+                <p id="para">EventListener works on document ! Click and Check.</p>
+        </body>
+    <script>
+        document.addEventListener("click",myEventHandler1);
+        document.addEventListener("click",myEventHandler2);
+        
+        function myEventHandler1()
+        {
+            document.body.style.background="silver";
+        }
+
+        function myEventHandler2()
+        {
+            alert("Some two Event Handlers");
+        }
+    </script>
+    </head>
+   
+
+</html>

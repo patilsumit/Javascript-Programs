@@ -1,0 +1,33 @@
+<!-- ----------------------------------------------------------------------
+Program       :Array Map Method Practice
+Date          :16-07-2018
+Auther        :Sumit Patil
+Institute     :WSA
+-------------------------------------------------------------------------- -->
+<html>
+<script>
+
+//---------Using Filter
+     var myArray1=[1,2,3,4,5,6,7,8,9];
+     var myArray2=[10,12,1,2,5,9];
+
+     var duplicate=myArray1.filter(function(elem)
+     {
+         return myArray2.includes(elem);
+     });
+
+     document.write("Duplicate Element:"+duplicate+"<br>");
+
+
+     //-----------Using Map---------------
+        var duplicate1=myArray1.map(function(elem)
+        {
+            return myArray2.includes(elem);
+        });
+
+        document.write("Map Element:"+duplicate1);
+
+
+    
+</script>
+</html>

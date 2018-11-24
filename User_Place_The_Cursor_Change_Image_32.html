@@ -1,0 +1,39 @@
+<!-- ----------------------------------------------------------------------
+Assignment No :32
+Program       :Write a JavaScript to When the user places the cursor over the image change the image,When the user removes the cursor from the image, display the old image.
+Date          :25-07-2018
+Auther        :Sumit Patil
+Institute     :WSA
+-------------------------------------------------------------------------- -->
+<html>
+    <head>
+        <title>User Place The Cursor Change The Image</title>
+        <style type="text/css">
+        body
+        {
+            background-position:cover;    
+        }
+        </style>
+    </head>        
+        <body  background="artful.jpg" >
+            <center>
+             <img id="img" src="africa.jpg" width="500px" height="450px" onmouseover="onMouseOver()" onmouseout="onMouseOut()">
+        </body>
+    
+        <script>
+        document.getElementById("img").addEventListener("mouseover",onmouseover); 
+         function onMouseOver()
+         {
+            document.getElementById("img").src="art.jpg";
+         }
+         document.getElementById("img").addEventListener("mouseout",onMouseOut);
+         function onMouseOut()
+         {
+             document.getElementById("img").src="africa.jpg";
+         }
+        
+                
+        </script>
+
+        
+</html>

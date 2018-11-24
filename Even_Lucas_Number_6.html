@@ -1,0 +1,42 @@
+<!-- ----------------------------------------------------------------------
+Assignment No :6
+Program       :Write in javascript language that takes an integer argument N and returns the sum of the first N + 1
+               even Lucas Numbers.
+Date          :27-06-2018
+Auther        :Sumit Patil
+Institute     :WSA
+------------------------------------------------------------------------ -->
+<html>
+<script>
+
+var myNum=Number(prompt("Enter Number:"));
+l0=2;
+l1=1;
+sum=0;
+
+for(i=0;i<=myNum;i++)
+{
+    document.write(" ",+l0);
+   
+   if(l0 % 2==0)
+   {
+       sum= sum + l0;
+   }
+    
+    myNext=l0 + l1;
+    l0=l1;
+    l1=myNext; 
+   
+     
+     
+   
+  
+}
+
+document.write("Sum Of Even Integers:"+sum);
+  
+</script>
+<Body>
+    
+    </Body>
+</html>

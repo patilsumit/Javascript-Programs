@@ -1,0 +1,36 @@
+<!-- ----------------------------------------------------------------------
+Assignment No :Classroom
+Program       :Function Constructor Invocation Program
+Date          :03-07-2018
+Auther        :Sumit Patil
+Institute     :WSA
+------------------------------------------------------------------------ -->
+<html>
+<script>
+    //--------Constructor Invocation 1
+    
+   var Fullname=function(firstname,lastname)
+   {
+       //create property fullname
+
+       return this.fullname=firstname + '' + lastname;
+   };
+
+  var obj=new Fullname("Sharada"," Patil");
+        
+  document.write("Constructor_Invocation 1 Full Name Is:" + obj.fullname +"<br>");
+
+
+  //----------------------------------------Constructor Invocation -2
+  var Fullname=function(firstname,lastname)
+   {
+       //create property fullname
+
+       return {fullname:firstname + '' + lastname}
+   };
+
+  var obj=new Fullname("Sharada"," Patil");
+        
+  document.write("Constructor_Invocation 2 Full Name Is:" + obj.fullname);
+</script>
+</html>

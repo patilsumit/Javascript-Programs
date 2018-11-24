@@ -1,0 +1,47 @@
+<!-- ----------------------------------------------------------------------
+Assignment No :11
+Program       :Write a javascript program to swap the word from lowercase to uppercase and vice versa.
+Date          :17-07-2018
+Auther        :Sumit Patil
+Institute     :WSA
+------------------------------------------------------------------------ -->
+<html>
+    <body>
+            <script >
+                debugger;
+                var myStr = "This Is A Sumit Patil";
+                    function viceversa() 
+                    {
+                        
+                        var temp = '';
+                        
+
+                        for (i = 0; i < myStr.length; i++) 
+                        {
+                            if (myStr.charCodeAt(i) >= 65 && myStr.charCodeAt(i) <= 90)//Using Unicode Character 
+                            {
+                                temp = temp + myStr.charAt(i).toLowerCase();//Convert into lowercase
+                            }
+                            else
+                            {
+                                temp = temp + myStr.charAt(i).toUpperCase(); //convert into uppercase
+                            }
+                                
+                        }
+                        document.write("----------------Output Using 1st Method:-----------"+"<br>");
+                        document.write(temp+"<br>");
+                    }
+                    viceversa(); 
+//------------ 2nd Method 
+var output; 
+debugger;
+    output= myStr.replace(/([a-zA-Z])/g, function(a)
+ {
+          return String.fromCharCode(a.charCodeAt() ^ 32);
+})
+document.write("----------------Output Using 2nd Method:-----------"+"<br>");
+document.write(output);
+
+                </script>
+    </body>
+    </html> 

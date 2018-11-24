@@ -1,0 +1,36 @@
+<!-- ----------------------------------------------------------------------
+Assignment No :33(a,b,c,d)
+Program       :Write a javascript program Create to two buttons changeFont and borderImage
+Date          :24-07-2018
+Auther        :Sumit Patil
+Institute     :WSA
+-------------------------------------------------------------------------- -->
+<html>
+    <head>
+        <title>Change Font And Border</title>
+   
+        <body>
+          <p id="para">EventListener works on document ! Click and Check.</p>
+                <button onclick="onChangeFont()">Change Font</button>
+                <button onclick="onBorderImage()">border Image</button>
+            </body>
+    <script>
+      
+      function onChangeFont()
+      {
+          para.style.fontSize=50;
+          para.style.color="red";
+         para.style.fontFamily="Courier";
+         para.style.fontWeight=900;
+      }
+      
+      function onBorderImage()
+      {
+          para.style.border="dashed red 10px";
+      }
+
+    </script>
+    </head>
+   
+
+</html>

@@ -1,0 +1,39 @@
+<!-- ----------------------------------------------------------------------
+Program       :Protype Inheritance
+Date          :09-08-2018
+Auther        :Sumit Patil
+Institute     :WSA
+------------------------------------------------------------------------ -->
+<html>
+    <head>
+        <title>Protype Inheritance</title>
+    </head>
+    <body>
+            <center>
+          <h1>Protype Inheritance</h1>
+          
+        </body>
+    
+   <script >
+     var person=function()
+     {
+         this.name="sharada";
+     }
+
+     //Adding a new property using prototype
+     person.prototype.city="Dhule";
+
+     var student=function() //child
+     {
+        this.course="FullStack Web Development";
+     }
+
+     //Inheritance all properties from parent using 'new'
+     student.prototype=new person();
+
+     var data=new student();
+     document.write("The Data name   : " + data.name + "<br>");
+     document.write("The Data City   : " + data.city + "<br>");
+     document.write("The Data Course : " + data.course + "<br>"); 
+   </script>
+</html>

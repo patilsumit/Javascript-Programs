@@ -1,0 +1,44 @@
+<!-- ----------------------------------------------------------------------
+Assignment No :19
+Program       :Write a program to input 10 numbers in an array and count total positive and negative number.
+Date          :26-06-2018
+Auther        :Sumit Patil
+Institute     :WSA
+------------------------------------------------------------------------ -->
+<html>
+<script>
+ 
+    var myNum=[];
+    var pos=0;
+    var neg=0;
+
+    for(i=1;i<=10;i++)
+    {
+
+       myNum[i]= Number(prompt("Enter Number:"));    
+      
+    }
+    
+      for(i=1;i<=10;i++)
+      {
+        if(myNum[i]>=0)
+        {
+          document.write("Postive Number:"+myNum[i]+"<br>");
+          pos++;
+        }
+        if (myNum[i] < 0 )
+        {
+            document.write("Negative Number:"+myNum[i]+"<br>");
+            neg++;
+        }     
+      }
+      
+       document.write("Postive Number Count:"+  pos);
+       document.write("Negative Number Count:"+ neg);    
+        
+</script>
+
+    <body>
+        
+    </body>
+</html>

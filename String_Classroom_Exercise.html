@@ -1,0 +1,55 @@
+<!-- ----------------------------------------------------------------------
+Program       :Excercise Programs 
+Date          :12-07-2018
+Auther        :Sumit Patil
+Institute     :WSA
+-------------------------------------------------------------------------- -->
+<html>
+<script>
+/*
+    var myString=prompt("Enter String:");
+     debugger;
+    var splitstr=[];
+    splitstr= myString.toLowerCase().split(' ');
+    var temp;
+    for(i=0;i<splitstr.length;i++)
+    {
+        temp = splitstr[i];
+        alert(temp);
+       if(temp != "between" && temp!="and")
+       {
+        splitstr[i]=splitstr[i].charAt(0).toUpperCase() + splitstr[i].substring(1);
+       }
+
+       
+    }
+    document.write(splitstr.join(' ')); */  
+    
+    //----------------------Part 2 Program
+
+   var myString=prompt("Enter String:");
+     debugger;
+    var splitstr=[];
+    splitstr= myString.toLowerCase().split(' ');
+    var temp;
+    for(i=0;i<splitstr.length;i++)
+    {
+        temp = splitstr[i];
+       // alert(temp);
+       if(temp != "to")
+       {
+        splitstr[i]=splitstr[i].toUpperCase();
+       }
+
+       
+    }
+    document.write(splitstr.join(' ')); 
+   
+
+
+    
+          
+
+     
+</script>
+</html>

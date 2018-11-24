@@ -1,0 +1,57 @@
+<!-- ----------------------------------------------------------------------
+Assignment No :Classroom
+Program       :Try Catch Classroom
+Date          :25-06-2018
+Auther        :Sumit Patil
+Institute     :WSA
+------------------------------------------------------------------------ -->
+<html>
+<script>
+
+function errorFunc()
+{
+    try
+    {
+        //ssssss
+        somejunk();
+    }
+    catch(e)
+    {
+        alert("Error Name:" + e.name);
+        window.alert("Error Message:"+ e.message);
+    }
+} 
+
+function rangeErrorFunc()
+{
+    try
+    {
+        var testArray=Array(-1);
+        console.log("The Length Of The Array:"+ testArray.length);
+    }
+    catch(e)
+    {
+        alert("Error Name:" + e.name);
+        window.alert("Error Message:"+ e.message);
+    }
+}
+function syntaxErrorFunc()
+{
+    try
+    {
+       eval("alert('Hello')");
+    }
+    catch(e)
+    {
+        alert("Error Name:" + e.name);
+        window.alert("Error Message:"+ e.message);
+    }
+}
+  
+</script>
+<Body>
+    <button onclick="errorFunc()">Test</button>
+    <button onclick="rangeErrorFunc()">Test1</button>
+    <button onclick="syntaxErrorFunc()">Test2</button>
+</Body>
+</html>

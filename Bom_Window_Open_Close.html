@@ -1,0 +1,50 @@
+<!-- ----------------------------------------------------------------------
+Program       :Bom Window Open Close  
+Date          :03-08-2018
+Auther        :Sumit Patil
+Institute     :WSA
+-------------------------------------------------------------------------- -->
+<html>
+    <head>
+        <title>Bom Simple Program</title>
+        
+    </head> 
+        <body>
+            <center>
+          <h1>Bom Window Open Close Program</h1>
+         
+        
+          
+         <button onclick="myWinOpen()">Open Window</button>
+         <button onclick="myWinMove()">Move Window</button>
+         <button onclick="myWinClose()">Close Window</button>
+         <button onclick="myWinResize()">Resize Window</button>
+        </body>
+        
+    <script>
+         var myWindow;
+
+        function myWinOpen()
+        {
+            myWindow=window.open("","BOM - Windows","width=400");
+        }
+
+        function myWinMove()
+        {
+            myWindow.moveTo(500,300);
+            myWindow.document.write("Moved the window now.This is how I Make DOM as a");
+        }
+
+        function myWinResize()
+        {
+            myWindow.myWinResize(1000,500);
+        }
+
+        function myWinClose()
+        {
+            myWindow.close();
+        }
+    </script>
+ 
+  
+</html>

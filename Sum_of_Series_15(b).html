@@ -1,0 +1,28 @@
+<!-- ----------------------------------------------------------------------
+Assignment No :15(b)
+Program       :Write a program to generate following sum of series.
+               2 + 4 + 6 +..................+n. 
+Date          :25-06-2018
+Auther        :Sumit Patil
+Institute     :WSA
+------------------------------------------------------------------------ -->
+<html>
+<script>
+
+//Input Number
+ var num=Number(prompt("Enter Number:"));
+ var sum=0;
+//For Loop
+ for(i=1;i<=num;i++)
+ {
+    
+     if(i % 2 ==0)
+     {
+       document.write("\t"+i+"<br>");
+       sum =sum + i;          
+     } 
+ }
+ document.write("Final Sum:"+sum);
+  
+</script>
+</html>

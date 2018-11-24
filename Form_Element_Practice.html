@@ -1,0 +1,36 @@
+<!-- ----------------------------------------------------------------------
+Program       :Form Element Practice 
+Date          :25-07-2018
+Auther        :Sumit Patil
+Institute     :WSA
+-------------------------------------------------------------------------- -->
+<html>
+    <head>
+        <title>Form Element Practice</title>
+   
+    <script>
+        debugger;
+        function Validate()
+        {
+            var x=document.forms["form1"]["fname"].value;
+            if(x=="")
+            {
+               alert("Please Enter Input Patil!");
+            }
+            else
+            {
+                alert("Ok See you Again!!!");
+            }
+        }              
+ 
+    </script>
+    </head>
+    <body>
+    <form id="form1" onsubmit="return Validate();">
+     <input type="text" name="fname" max=5>   
+     <input type="submit" id="btnsub"  value="submit"/>
+     
+    </form>
+    </body>
+
+</html>

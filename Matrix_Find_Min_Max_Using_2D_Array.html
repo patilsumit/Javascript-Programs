@@ -1,0 +1,55 @@
+<!-- ----------------------------------------------------------------------
+Program       :Write a Javascript Program For Matrix Min Max Operation of Each Row using 2D Array. 
+Date          :10-07-2018
+Auther        :Sumit Patil
+Institute     :WSA
+--------------------------------------------------------------- -->
+<html>
+<script>
+
+var a=[[1,2,3],[4,5,6],[7,8,9]];
+
+var i,j;
+var sum=0;
+
+debugger;
+for(i=0;i<a.length;i++)
+{
+   for(j=0;j<a.length;j++)
+   {
+     document.write(a[i][j] +" "); 
+   }
+   document.write("<br>");
+}
+   document.write("------------Max For Each Row----------"+"<br>");
+    
+    for(i=0;i<a.length;i++)
+    {
+      var max=0;   
+      for(j=0;j<a.length;j++)
+       {
+          if(a[i][j]>max)
+          {
+             max=a[i][j];
+          }
+
+       }
+       document.write("<br>Maximum Number:"+max);
+    }
+    document.write("<br><br>"+"------------Min For Each Row----------"+"<br>");
+    for(i=0;i<a.length;i++)
+    {
+      var min=Infinity;   
+      for(j=0;j<a.length;j++)
+       {
+          if(a[i][j]<min)
+          {
+             min=a[i][j];
+          }
+
+       }
+       document.write("<br>Minimum Number:"+min);
+    }
+
+</script>
+</html>

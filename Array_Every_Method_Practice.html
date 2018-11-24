@@ -1,0 +1,26 @@
+<!-- ----------------------------------------------------------------------
+Program       :Array iteration every Method Practice 
+Date          :16-07-2018 
+Auther        :Sumit Patil
+Institute     :WSA
+-------------------------------------------------------------------------- -->
+<html>
+    <body>
+<script>
+    
+    var myNum=[24,69,35,25,15];
+      
+       //The every() method check if all array values pass a test.
+   
+    var myResult=myNum.every(myFunction);
+
+       
+    function myFunction(value,index,array)
+    {
+        return value > 18;
+    }
+    document.write("All Element Are 18 Plus:"+myResult);
+
+</script>
+    </body>
+</html>

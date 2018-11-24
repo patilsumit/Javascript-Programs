@@ -1,0 +1,80 @@
+<!-- ----------------------------------------------------------------------
+Program       :Dom Animation
+Date          :31-07-2018
+Auther        :Sumit Patil
+Institute     :WSA
+-------------------------------------------------------------------------- -->
+<html>
+    <head>
+        <title>Dom Animation </title>
+        <style>
+            #animate1{
+                width:50px;
+                height: 50px;
+                 margin-left:60px;  
+                position:absolute;
+                background-color:red;  
+            }
+            #animate2{
+                width:50px;
+                height: 50px;
+                position:absolute;
+                background-color:blue;  
+            }
+        </style>
+    </head> 
+        <body>
+            <center>
+          <h1>Animation Example - Move the box</h1>
+          <p>
+         <button onclick="moveTheSquare()">Start Animate</button>
+         <button onclick="stopAnimate()">Stop Animate</button>
+          </p>
+          <div id="animate1"></div>
+          <div id="animate2"></div>
+        </body>
+        
+    <script>
+       var timerFunctionId;
+        function moveTheSquare()
+        {
+            var aniElem1=document.getElementById("animate1"); 
+            var aniElem2=document.getElementById("animate2");
+            
+            
+
+            timerFunctionId=setInterval(animationFrame,100); 
+               function animationFrame()
+               {
+                    var max=350;
+                    var myNum1=Math.floor(Math.random() * Math.floor(max));
+                    var myNum2=Math.floor(Math.random() * Math.floor(max));
+            
+                    
+                     aniElem1.style.left=myNum1 + 'px';
+                     aniElem1.style.top=myNum2  + 'px'; 
+
+                     var myNum1=Math.floor(Math.random() * Math.floor(max));
+                     var myNum2=Math.floor(Math.random() * Math.floor(max));
+                     
+                     aniElem2.style.left=myNum1 + 'px';
+                     aniElem2.style.top=myNum2  + 'px';
+                  
+               }
+               
+               
+        }
+        function stopAnimate()
+               {
+                   clearInterval(timerFunctionId);
+               }
+        
+        
+       
+      
+            
+        
+    </script>
+ 
+  
+</html>

@@ -1,0 +1,46 @@
+<!-- ----------------------------------------------------------------------
+Program       :Form Validation
+Date          :06-08-2018
+Auther        :Sumit Patil
+Institute     :WSA
+------------------------------------------------------------------------ -->
+<html>
+    <head>
+        <title>Form Validation</title>
+        
+    </head>
+    <body><center>
+        <h1>Form Validation</h1>
+      <form name="form1" onsubmit="return validateForm(this);">
+      Username:<input type="text" name="username" size="10"><br>
+      Password:<input type="password" name="password" size="10"><br>
+      <input type="submit" value="Submit">
+      <input type="reset" value="Reset Form">  
+     </form>
+      
+    </body>
+    
+<script>
+    function validateForm()
+    {
+        var uname=document.form1.username.value;
+        var password=document.form1.password.value;
+        if(uname.length == 0)
+        {
+          alert("User Must Enter  a UserName;");
+          return false;
+        }
+        else if(password.length<6)
+        {
+            alert("Password Must be at least 6 characters long.");
+            return false;
+        }
+        else
+        {
+            alert("Username Entered: " + uname);
+            alert("Password Entered: " + password);
+        }
+       
+    }
+</script>
+</html>

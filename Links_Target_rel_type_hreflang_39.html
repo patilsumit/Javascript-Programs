@@ -1,0 +1,38 @@
+<!-- ----------------------------------------------------------------------
+Assignment No :39
+Program       :Write a JavaScript function to get the value of href ,hreflang ,rel ,target and type attributes of the
+               specified links.
+Date          :26-07-2018
+Auther        :Sumit Patil
+Institute     :WSA
+------------------------------------------------------------------------ -->
+<html>
+<head>
+    <title>Links Rel Type hreflang</title>
+    <script>
+
+        //Click the url to return the language code of the linked document using hreflang.
+        function myFunction()
+         {
+             var x = document.getElementById("myLink").hreflang;
+             alert(x);
+         }
+    </script>
+</head>
+
+    <body>
+        <a href="https://www.google.com/">Link Are Prefer</a><br/>
+        <a href="https://www.app-u.co.in/" target="self">Target Prefer</a><br/>
+        
+        <link id="myLink" href="https://www.google.com/" hreflang="Teco">HreFlaag PreFer</a><br/>
+        
+        <!-- rel define the stylesheet and author etc.-->
+        <link href="style.css" rel="stylesheet" type="text/css">
+        
+        <!-- type define  languages like css javascript-->
+        <script type="text/JavaScript"></script>
+        <button onclick="myFunction()">Hre Flang</button>
+    </body>
+     
+        
+</html>

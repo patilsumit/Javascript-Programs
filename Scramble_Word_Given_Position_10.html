@@ -1,0 +1,36 @@
+<!-- ----------------------------------------------------------------------
+Assignment No :10
+Program       :Write a Javascript program to scramble the word to given position.
+Date          :17-07-2018
+Auther        :Sumit Patil
+Institute     :WSA
+------------------------------------------------------------------------ -->
+<html>
+    <body>
+    <script>
+        debugger;
+     var myStr="hello";
+     var myPos=prompt("Enter Number:");     
+    
+    var splitStr=myStr.split("");
+    var splitNum=myPos.split("");
+
+     var st=[];
+    for(i=0;i<splitNum.length;i++)
+    {
+        for(j=0;j<splitStr.length;j++)
+        {
+              if(splitNum[i]==j)
+              {
+                 st[i]=splitStr[j];
+              }
+        }
+    }    
+
+    document.write(st.join(' '));
+
+    
+
+    </script>
+    </body>
+    </html> 

@@ -1,0 +1,100 @@
+<!-- ----------------------------------------------------------------------
+Program       :Dom Dynamically Node Operation
+Date          :01-08-2018
+Auther        :Sumit Patil
+Institute     :WSA
+-------------------------------------------------------------------------- -->
+<html>
+    <head>
+        <title>Dom dyanamically Node Element</title>
+        
+    </head> 
+        <body>
+            <center>
+          <h1>Dom Dynamically Multiple Node Lists</h1>
+          <p> try out adding and removing elements using dom......</p> 
+             
+          <button onclick="myCreateMultipleUL()">Create UL LI</button>
+          <button onclick="myDeletList()">Delete Specfied List</button>
+          <button onclick="myInsertElement()">Insert a Element</button>
+        
+                         
+         
+        </body>
+        
+    <script>
+               
+        function myDeletList()
+        {
+            var dListName   = prompt("Enter the list name");
+	        var dNodeNumber = parseInt(prompt("Enter the item number you want to delete,starting with 0"));
+	
+	       // Given multiple lists get the actual list name 
+	        var deleteList = document.getElementById(dListName);
+	
+	       // Delete the child number which you need to remove 
+	       var dNode = deleteList.childNodes[dNodeNumber];
+	
+      	   deleteList.removeChild(dNode);
+        }
+               
+        
+         function myInsertElement()
+         {
+             var iListName=prompt("Enter List Name:");
+             var iTextContent=prompt("Enter the Text For Inserting:");
+             var iInsertPos=Number(prompt("Enter Insert Position:"));
+
+             var iList=document.getElementById(iListName);
+
+             var newItem=document.createElement("LI");
+             var textNode=document.createTextNode(iTextContent);
+             newItem.appendChild(textNode);
+
+             var iNode=iList.childNodes[iInsertPos];
+             iList.insertBefore(newItem,iNode);
+         } 
+
+        function myCreateMultipleUL()
+        {
+             //Create UL List
+            var namedUL=document.createElement("UL");
+            document.body.appendChild(namedUL);
+
+
+            //Create  List Name
+            var listName=prompt("Enter The List Name:");
+
+            //Create Attribute
+            var lAttribute=document.createAttribute("id");
+            lAttribute.value=listName;
+
+            namedUL.setAttributeNode(lAttribute);
+
+    
+             //Display The list name dyanamically
+                
+             var pElement=document.createElement("P");
+             document.body.appendChild(pElement);
+             pElement.innerHTML="The List Name Is : " + listName + "<br>" + "<br>";
+
+            var n=Number(prompt("Enter How Many Element"));
+            for(i=0;i<n;i++)
+           {
+               var namedLI=document.createElement("LI");
+               var getText=document.createTextNode(prompt("Enter Text:"));
+
+               namedLI.appendChild(getText); 
+               namedUL.appendChild(namedLI);
+               pElement.appendChild(namedUL);
+
+           }
+       
+                 
+            
+    
+        }
+    </script>
+ 
+  
+</html>

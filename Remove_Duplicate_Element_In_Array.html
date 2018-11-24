@@ -1,0 +1,29 @@
+<!-- ----------------------------------------------------------------------
+Program       :Write a Javascript Program Remove Duplicate Element of Array  . 
+Date          :09-07-2018
+Auther        :Sumit Patil
+Institute     :WSA
+--------------------------------------------------------------- -->
+<html>
+<script>
+var myArray=[20,95,13,12,27,95,95,95];
+
+
+  var myArray2=[];
+ myArray.sort(function(a,b){return a-b});
+    for(i=0;i<myArray.length;i++)
+    { 
+        j=0;
+        if(myArray[i]!=myArray[i + 1])
+        {
+            
+           myArray2[j]=myArray[i];
+           document.write(","+myArray2[j]);
+           j++;   
+        }
+       
+    }     
+
+
+</script>
+</html>

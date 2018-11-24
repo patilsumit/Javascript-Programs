@@ -1,0 +1,36 @@
+<!-- ----------------------------------------------------------------------
+Program       :Array Filter Api Method Practice 
+Date          :12-07-2018
+Auther        :Sumit Patil
+Institute     :WSA
+-------------------------------------------------------------------------- -->
+<html>
+<script>
+    var myArray=[1,2,3,4,5,6,7,8,9,10];
+
+    function demoFilter(elem,index,arr)
+    {
+        document.write("Element:"+elem+"Position:"+index);
+        document.write(arr+"<br>");
+    }
+
+    myArray.filter(demoFilter);
+
+    var words=['limit','elite','exuberant','destruction'];
+ 
+    var result=words.filter(function(elem)
+    {
+        return elem.length>6;
+    });
+
+    document.write("Filter Array:"+result+"<br>");
+
+    function isEven(currentElement)
+    {
+       return currentElement%2==0;
+    }
+    var result=myArray.filter(isEven);
+    document.write("Even Numbers are:"+ result);
+     
+</script>
+</html>

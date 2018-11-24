@@ -1,0 +1,30 @@
+<!-- ----------------------------------------------------------------------
+Assignment No :36
+Program       :Write a JavaScript function to check whether a string contains alpha ,dash and underscore.
+Date          :23-07-2018
+Auther        :Sumit Patil
+Institute     :WSA
+-------------------------------------------------------------------------- -->
+<html>
+    <head>
+        <title>aplha dash underscore</title>  
+   
+    <script>
+        var myStr=prompt("Enter String:");
+
+        var regExp=/[a-zA-Z0-9\-\_]$/;
+        if(myStr.search(regExp) == -1)
+        {
+            alert("String Not Contains alpha:");
+        } 
+        else
+        {
+            alert("Matching dash & Underscore:");
+        }
+        </script>
+    </head>
+    <body>
+
+    </body>
+
+</html>

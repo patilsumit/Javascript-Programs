@@ -1,0 +1,63 @@
+<!-- ----------------------------------------------------------------------
+Assignment No :05(a)
+Program       :Write a Javascript program To Convert a decimal number to binary, octal and hexadecimal. 
+Date          :05-07-2018
+Auther        :Sumit Patil
+Institute     :WSA
+--------------------------------------------------------------- -->
+<html>
+<script>
+  
+function dec2bin(myNum) {
+            var bits = [];
+            for (var i = 0; i < 8; i++) 
+            {  
+              	bits.push(myNum % 2);
+                myNum = (myNum - myNum % 2) / 2;
+            }
+            bits.reverse();
+            return bits.join("");
+	};
+ document.write("Decimal TO Binary:"+dec2bin(15)+"<br>") ;
+
+//---------Decimal TO Octal----------
+function dec2oct(myNum) {
+            var bits = [];
+            for (var i = 0; i < 8; i++) 
+            {
+              	bits.push(myNum % 8);
+                myNum = (myNum - myNum % 8) / 8;
+            }
+            bits.reverse();
+            return bits.join("");
+	};
+ document.write("Decimal TO Octal:"+dec2oct(15)+"<br>") ;
+
+//-----------Decimal To Hexa-----------------------
+ debugger;
+ function dec2hex(myNum)
+ {
+    
+         var r=myNum % 16;  //Set Reminder
+         if(myNum - r == 0)
+         {
+          
+          return toChar(r);  //number to string convert
+         
+         }
+         return dec2hex((myNum -r)/16) + toChar(r);
+         function toChar(n)
+         {
+           var char="0123456789ABCDEF";   
+           return  char.charAt(n); //Chack specfic Number Of location of String
+         }
+     
+ };
+ document.write("Decimal To Hexa:"+dec2hex(1514));
+
+ var num=1514 % 16;
+
+ document.write(num);
+
+</script>
+</html>

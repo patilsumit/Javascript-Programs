@@ -1,0 +1,52 @@
+<!-- ----------------------------------------------------------------------
+Assignment No :8
+Program       :Write a Javascript program to determine whether the robot makes a circle or not.
+Date          :02-07-2018
+Auther        :Sumit Patil
+Institute     :WSA
+------------------------------------------------------------------------ -->
+<html>
+<script>
+
+   
+    var leftD=0,upD=0;
+    
+
+     myLength=Number(prompt("Enter Length:"));
+     
+    
+     for(i=1;i<=myLength;i++)
+     {
+        myRobot=prompt("Enter Path:");  //Enter L or R OR U or D Path 
+        switch(myRobot)  
+    {
+        case "L" :
+                   leftD++;
+                   break;
+        case "R" :
+                  leftD--;
+                  break;
+        case "U" :
+                   upD++;
+                   break;
+        case "D" :
+                  upD--;
+                  break;
+        default: alert("Invalid Input");
+                i--;
+                break;
+                          
+    }
+     } 
+    
+    if(upD==0 && leftD==0)
+    {
+      alert("True");
+    }
+    else
+    {
+        alert("False");
+    }
+  
+</script>
+</html>

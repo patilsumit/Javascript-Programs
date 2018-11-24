@@ -1,0 +1,87 @@
+<!-- ----------------------------------------------------------------------
+Program       :Dom New Element Addition
+Date          :30-07-2018
+Auther        :Sumit Patil
+Institute     :WSA
+-------------------------------------------------------------------------- -->
+<html>
+    <head>
+        <title>Dom New Element</title>
+        
+    </head> 
+        <body>
+            <center>
+          <h1>Dom New Element Handling</h1>
+          <p> try out adding and removing elements using dom......</p> 
+
+          <div id="divtag">
+              <p id="dpara1">Deleting this paragraph...1</p>
+              <p id="dpara2">Deleting this paragraph...2</p>
+          </div>
+          
+             
+          <button onclick="myButtonAdd()">Add a Button</button>
+          <button onclick="myTextButtonAdd()">Add a Labeled Button</button>
+          <button onclick="myParagraphRemove()">Remove a Paragraph</button>
+          <button onclick="myCreateUL()">Create UL LI</button>
+        </body>
+        
+    <script>
+        function myButtonAdd()
+        {
+            //Create a button element
+            var button=document.createElement("BUTTON");
+
+            //Append into HTML
+            document.body.appendChild(button); 
+        }
+    
+        function myTextButtonAdd()
+        {
+            var namedButton=document.createElement("BUTTON");
+            var buttonText=document.createTextNode("CLICK ME");
+
+            //Append required text into button child -> parent
+            namedButton.appendChild(buttonText); 
+            
+            //Now append the button as a new child to HTML 
+            document.body.appendChild(namedButton);
+        }
+
+        function myParagraphRemove()
+        {
+           //Get the Paragraph and its parant that need to be removed
+           var deletePara=document.getElementById("dpara1");
+           var deleteParaParent=document.getElementById("divtag");
+              
+           //Delete using parent similar to append
+           deleteParaParent.removeChild(deletePara);
+        }
+        function myCreateUL()
+        {
+            for(i=0;i<4;i++)
+            {
+                //Create UL List
+            var namedUL=document.createElement("UL");
+
+            //Create LI List
+            var namedLI=document.createElement("LI");
+            
+                //Enter User Input
+                var getText=document.createTextNode(prompt("Enter City:"));
+                var parent=document.getElementById("divtag");  //Define Divsion Tag
+                namedLI.appendChild(getText);
+                namedUL.appendChild(namedLI);
+                parent.appendChild(namedUL);
+                // document.body.appendChild(namedUL);
+                 
+            }
+            
+            
+
+            
+        }
+    </script>
+ 
+  
+</html>

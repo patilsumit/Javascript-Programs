@@ -1,0 +1,29 @@
+<!-- ----------------------------------------------------------------------
+Program       :Regular Program Print Credit Card Number apply
+Date          :17-07-2018
+Auther        :Sumit Patil
+Institute     :WSA
+------------------------------------------------------------------------ -->
+<html>
+    <body>
+    <script>
+        //Given Input is credit card validate 
+        debugger;
+        function credit_case(num)
+        {
+          //  var regexp=/^(?:[0-9]{16}(?:[0-9]{4})?)$/;
+          var regexp=/^[0-9]{16}$/;
+            if(regexp.test(num))
+            {
+               console.log("Credit Card Is Validate");
+            }
+            else
+            {
+                console.log("Credit Card Is Not Validate");
+            }
+        };
+        credit_case(1234567812341235);
+         
+    </script>
+    </body>
+    </html> 

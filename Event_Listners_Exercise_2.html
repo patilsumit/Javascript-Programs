@@ -1,0 +1,40 @@
+<!-- ----------------------------------------------------------------------
+Program       :Write Javascript program to create a text field and show the effect of spme events.
+Date          :24-07-2018
+Auther        :Sumit Patil
+Institute     :WSA
+-------------------------------------------------------------------------- -->
+<html>
+    <head>
+        <title>Event Listeners Exercise 2</title>
+   
+        <body>
+              onChange TextBox: <input type="text" id="txtchange"><br>
+               onFocus TextBox:<input type="text" id="txtfocus"><br>
+               onBlur TextBox:<input type="text" id="txtblur">
+                
+            </body>
+    <script>
+        
+       
+        txtchange.addEventListener("change",onChange);
+        function onChange()
+        {
+           document.body.style.backgroundColor="yellow";
+        }
+        txtfocus.addEventListener("focus",onFocus);
+        function onFocus()
+        {
+            this.style.backgroundColor="blue";
+        }
+        txtblur.addEventListener("blur",onBlur);
+        function onBlur()
+        {
+            txtblur.style.backgroundColor="green";
+        }
+        
+    </script>
+    </head>
+   
+
+</html>

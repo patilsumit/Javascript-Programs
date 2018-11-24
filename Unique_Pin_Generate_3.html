@@ -1,0 +1,95 @@
+<!-- ----------------------------------------------------------------------
+Assignment No :03
+Program       :Write a Javascript Function to generate the unique PIN number of given length n. 
+Date          :29-06-2018
+Auther        :Sumit Patil
+Institute     :WSA
+--------------------------------------------------------------- -->
+<html>
+	<head>
+		<title>Unique Pin Number</title>
+	</head>
+	<body>
+<script>
+/*
+var MyNum=Number(prompt("Enter Length:"));
+debugger;
+var digit = "0123456789";
+	var MyNum_length = MyNum;
+	for (var i=1; i<MyNum_length; i++)
+     {
+		var rnum = Math.floor(Math.random() * digit.length);
+		MyNum += digit.substring(rnum,rnum+1);
+	}
+
+	document.write(MyNum);
+*/	
+
+        //Gather user input
+        var userInput = Number(prompt("Enter the length of the PIN :"));
+
+        document.write("Your Unique Number is ");
+
+        var arrayOne = [];
+
+        var loopCount = 1;
+
+
+        //If loop for checking if the number is in the range
+        if(userInput<=10 && userInput >= 1) {        
+         
+            //while loop for keeping count of the number of digits
+            while(loopCount <= userInput) {
+
+                //Generating a random number
+                var randomNum1 = Math.floor(Math.random()*10);
+
+                //If loop to check if the number is repeated before
+                if(isPresent(randomNum1) == false) {
+
+                    document.write(randomNum1);
+
+                    loopCount++;
+                }
+            }
+
+
+            //function to check repeated numbers and store not-repeated numbers in an array
+            function isPresent(randomNum) {
+
+                //for loop to run through the array
+                for(var k = 0; k <= arrayOne.length; k++) {
+
+                    var preSent = false;
+
+                    //if statement to check if the random number is present in the array
+                    if(randomNum == arrayOne[k]) {
+
+                        preSent = true;
+                        
+                        break;
+                    }
+
+                }
+
+                //storing the new number in the array
+                if(preSent == false) {
+
+                    arrayOne.push(randomNum);
+                }
+
+                return preSent;
+            };
+
+        }
+
+        //alerting if the user inputs a number out of range
+        else {
+
+            alert("Please enter a number lesser than 10 and greater than 0.");
+        } 
+    
+      
+	  </script>
+   </body>
+</html>

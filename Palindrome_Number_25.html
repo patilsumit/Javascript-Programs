@@ -1,0 +1,38 @@
+<!-- ----------------------------------------------------------------------
+Assignment No :25
+Program       :Write a JavaScript function to check whether it is palindrome or not.
+Date          :28-06-2018
+Auther        :Sumit Patil
+Institute     :WSA
+------------------------------------------------------------------------ -->
+<html>
+<script>
+    
+  var myNum=Number(prompt("Enter Number:"));
+
+  var copyNum=myNum;
+  var revNum=0;
+  var remainder=0;
+  
+      debugger;
+      while(myNum!=0)
+      {
+
+        remainder = myNum % 10;
+        revNum= revNum * 10 + remainder;
+        
+        myNum=(myNum - remainder) / 10;    
+      }
+      
+
+       if(revNum==copyNum)
+       {
+        document.write("Number Is A Palindrome");
+       }
+       else
+       {
+        document.write("Number Is A Not Palindrome");
+       }
+    
+</script>
+</html>

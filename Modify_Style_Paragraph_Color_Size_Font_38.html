@@ -1,0 +1,43 @@
+<!-- ----------------------------------------------------------------------
+Assignment No :38
+Program       :Write a JavaScript to modify the style of paragraph , while clicking the button font , font size and
+               color of the pargaraph will be changed.
+Date          :25-07-2018
+Auther        :Sumit Patil
+Institute     :WSA
+-------------------------------------------------------------------------- -->
+<html>
+    <head>
+        <title>Modify Style  Font And Border</title>
+        <link href="https://fonts.googleapis.com/css?family=Eczar|Teko" rel="stylesheet">
+        <script>
+      
+                function onChangeFont()
+                {
+                  para.style.fontFamily='Teko';
+                }
+                function onChangeFontSize()
+                {
+                  para.style.fontSize=25;
+                }
+                
+                function onChangeColor()
+                {
+                  para.style.color="red";
+                }
+          
+              </script>
+    </head>
+        <body>
+          <p id="para">I am Sumit Patil works on JavaScript ! Click and Check.
+                सुमित पाटील फुल्ल स्टॅक डेव्हलपर्स. 
+          </p>
+                <button onclick="onChangeFont()">Change Font</button>
+                <button onclick="onChangeFontSize()">Change Font Size</button>
+                <button onclick="onChangeColor()">Change Color</button>
+            </body>
+    
+    
+   
+
+</html>

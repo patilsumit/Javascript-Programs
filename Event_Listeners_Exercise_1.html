@@ -1,0 +1,43 @@
+<!-- ----------------------------------------------------------------------
+Program       :Write a javascript program to create a paragraph and background color must using event listeners.
+Date          :24-07-2018
+Auther        :Sumit Patil
+Institute     :WSA
+-------------------------------------------------------------------------- -->
+<html>
+    <head>
+        <title>Event Listeners Exercise 1</title>
+   
+        <body>
+                <p id="para">EventListener works on document ! Click and Check.Sumit Patil is FullStack Developer At WSA. </p>
+                
+            </body>
+    <script>
+        document.addEventListener("click",onMouseClick);
+        document.addEventListener("dblclick",ondbClick);
+        document.addEventListener("mouseout",onMouseOut);
+        document.addEventListener("mouseover",onMouseOver);
+
+
+        function onMouseClick()
+        {
+            para.style.backgroundColor="yellow";
+        }
+        function ondbClick()
+        {
+            para.style.backgroundColor="blue";
+        }
+        function onMouseOut()
+        {
+            para.style.backgroundColor="green";
+        }
+        function onMouseOver()
+        {
+            para.style.backgroundColor="red";
+        }
+      
+    </script>
+    </head>
+   
+
+</html>

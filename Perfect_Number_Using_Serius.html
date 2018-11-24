@@ -1,0 +1,29 @@
+<!-- ----------------------------------------------------------------------
+Program       :Write a Javascript Program Perfect Number. 
+Date          :10-07-2018
+Auther        :Sumit Patil
+Institute     :WSA
+--------------------------------------------------------------- -->
+<html>
+<script>
+
+//------------  Range To Find Perfect Number------
+document.write("Perfect Number:");
+for(i=1;i<10000;i++)
+{
+    sum=0;
+    
+     for(j=0;j<i;j++)
+     {
+         if(i % j==0)
+         {
+            sum= sum + j;      
+         }      
+     } 
+     if(sum==i)
+     {
+        document.write(" "+i);
+     }
+}
+</script>
+</html>

@@ -1,0 +1,59 @@
+<!-- ----------------------------------------------------------------------
+Assignment No :44
+Program       :Write a JavaScript program that will create button
+               a) For open a new google search window
+               b) Resize the window .
+               c) Scroll the window 10 pixels to the right.
+               d) Move the new window relative to its current position.
+Date          :06-08-2018
+Auther        :Sumit Patil
+Institute     :WSA
+------------------------------------------------------------------------ -->
+<html>
+    <head>
+        <title>Create Window,Resixe,Scroll</title>
+        <style>
+            body
+            {
+                width:5000px; 
+            }
+           
+        </style>
+    </head>
+    <body>
+        
+      <button onclick="openGoogle()">Open Google</button>
+      <button onclick="onResize()">Resize</button>
+      <button onclick="onScroll()">Scroll</button>
+      <button onclick="onMove()">Move</button>
+    </body>
+    
+<script>
+    var myWindow;
+    function openGoogle()
+    {
+        var myURL="http://www.google.com";
+        myWindow=window.open("","","width=100,height=100");
+    }
+
+    function onResize()
+    {
+        myWindow.resizeTo(250,250);
+        myWindow.focus();
+        
+    }
+
+    function onScroll()
+    {
+        myWindow=window.scrollTo(500,0)
+    }
+
+    function onMove()
+    {
+        myWindow.moveTo(500,100);
+        myWindow.focus();
+        
+    }
+  
+</script>
+</html>

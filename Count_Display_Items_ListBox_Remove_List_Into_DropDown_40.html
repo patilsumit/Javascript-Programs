@@ -1,0 +1,43 @@
+<!-- ----------------------------------------------------------------------
+Assignment No :40
+Program       :Write a JavaScript function to 
+               a) count and display the items in a list box in a alert window.
+               b) remove items from a dropdown list.
+Date          :27-07-2018
+Auther        :Sumit Patil
+Institute     :WSA
+-------------------------------------------------------------------------- -->
+<html>
+    <head>
+        <title>Dropdown List And Remove Items</title>
+  
+        <body>
+                <select id="state"> <!-- Create Dropdown List-->
+                    <option id="st" value="Karnataka">Karnataka</option>
+                    <option id="st" value="Gujarat">Gujarat</option>
+                    <option id="st" value="Maharastra">Maharastra</option>
+                    <option id="st" value="Delhi">Delhi</option>
+                    <option id="st" value="Kerla">Kerla</option>
+        
+                </select>
+                <br/><br/>
+                <button id="btndel">Remove Items</button>
+            </body>
+        
+    <script>
+        
+        var x=document.getElementById("state")
+        document.write("ListItems Length:"+x.length);//Length Of Dropdown List
+       
+       btndel.addEventListener("click",RemoveItems); //Add Event Listeners
+        function RemoveItems()
+        {
+           x.remove(x.selectedIndex);
+           alert(x.length); 
+        }
+       
+        
+        </script>
+    </head>
+  
+</html>

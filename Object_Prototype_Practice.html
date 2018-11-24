@@ -1,0 +1,41 @@
+<!-- ----------------------------------------------------------------------
+Program       :Object Prototype Practice
+Date          :13-08-2018
+Auther        :Sumit Patil
+Institute     :WSA
+-------------------------------------------------------------------------- -->
+<html>
+    <head>
+        <title>Object Prototype Practice</title>     
+    </head> 
+        <body>
+            <center>
+          <h1>Object Prototype Practice</h1>
+          
+        </body>
+        
+    <script>
+       var peopleproto=function()
+       {
+       };
+           peopleproto.prototype.age=0;
+           peopleproto.prototype.name="No Name";
+           peopleproto.prototype.city="No City";
+
+           peopleproto.prototype.printperon=function()
+           {
+               console.log(this.age +" , " + this.name + " , " + this.city);
+           };
+            
+          var people1= new peopleproto();
+          people1.age=21;
+          people1.name="Sharada";
+          people1.city="Navsari";
+
+          people1.printperon();
+           console.dir(peopleproto);
+       
+    </script>
+ 
+  
+</html>

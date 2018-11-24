@@ -1,0 +1,23 @@
+<!-- ----------------------------------------------------------------------
+Assignment No :Classroom
+Program       :Bitwise Operator Postion Swap
+Date          :25-06-2018
+Auther        :Sumit Patil
+Institute     :WSA
+------------------------------------------------------------------------ -->
+<html>
+<script>
+
+
+var myNum=19;
+
+var position=4;
+
+var newNum=(myNum) | (1 << (position -1 )); //set the bit
+
+newNum=(myNum) ^ (1 << (position-1)); //Toggle
+
+document.write(newNum);
+  
+</script>
+</html>

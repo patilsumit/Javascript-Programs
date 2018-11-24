@@ -1,0 +1,46 @@
+<!-- ----------------------------------------------------------------------
+Program       :Simple Event Handling
+Date          :23-07-2018
+Auther        :Sumit Patil
+Institute     :WSA
+-------------------------------------------------------------------------- -->
+<html>
+    <head>
+        <title>Event Handling</title>
+   
+    <script>
+        function show()
+        {
+            document.write("Hello World");
+            
+        }
+        function OnMouseIn(elem)
+        {
+           elem.style.backgroundColor="red";
+        }
+        function OnMouseOut(elem)
+        {
+            elem.style.backgroundColor="blue";
+        }
+        function OnMouseClick(elem)
+        {
+            elem.style.backgroundColor="green";
+        }
+        function OnMouseDoubleClick(elem)
+        {
+            elem.style.backgroundColor="yellow";
+        }
+        </script>
+    </head>
+    <body onload="alert('Welcome To My Page!');" onunload="alert('Goodbye! Sorry to see you go!');">
+      <h3>  <marquee>Sumit Patil</marquee></h3>
+        <button onclick="show()">Show</button>
+        <button onclick="alert('Hello World!!')">Alert</button>
+        <button onmouseover="alert('Mouse Hover')">Mouse Hover</button>
+        <button onkeypress="alert('Key Press')">Key Press</button>
+        <img src="node.png" height="300" width="350" >
+     
+        <p onmouseover="OnMouseIn(this)" onmouseout="OnMouseOut(this)" onclick="OnMouseClick(this)" ondblclick="OnMouseDoubleClick(this)">This Is my Own Paragraph! My Self Sumit Patil Node Developer.</p>
+    </body>
+
+</html>
